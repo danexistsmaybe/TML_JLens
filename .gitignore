@@ -1,4 +1,4 @@
-.claude/
+.agent/
 .venv/
 hf_cache/
 __pycache__/
