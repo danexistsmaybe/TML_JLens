@@ -1,0 +1,8 @@
+.claude/
+.venv/
+hf_cache/
+__pycache__/
+*.pt
+*.ckpt
+*.bin
+*.log
