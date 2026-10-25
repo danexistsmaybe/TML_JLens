@@ -1,8 +1,13 @@
 .agent/
 .venv/
-hf_cache/
 __pycache__/
 *.pt
-*.ckpt
-*.bin
 *.log
+
+# Large or regenerable data. data/splits.json (the split manifest) IS tracked.
+data/hf_cache/
+data/jacobians/
+data/lenses/
+
+# Generated analysis output (scripts are tracked, their outputs are not)
+analysis/out/
