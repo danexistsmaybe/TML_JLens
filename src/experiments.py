@@ -107,7 +107,7 @@ def features_of(model, domain: str, layers) -> dict:
     fit = cached_features(model, f"{domain}_fit", window_ids(fit_windows(domain)), layers)
     centroid_half, _ = validation_halves(domain)
     mu = cached_features(model, f"{domain}_mu", window_ids(centroid_half), layers)
-    return {"fit": fit, "mu": {l: mu[l].mean(0) for l in layers}}
+    return {"fit": {l: fit[l][:FIT_SIZE] for l in layers}, "mu": {l: mu[l].mean(0) for l in layers}}
 
 
 # ---------------------------------------------------------------------------------------

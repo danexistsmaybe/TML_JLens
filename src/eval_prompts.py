@@ -104,20 +104,25 @@ def lens_vectors(model, lens: JLens, layer: int, tokens: list[int]) -> torch.Ten
 
 
 @torch.no_grad()
-def swapped_logits(model, tok, prompt: str, lens: JLens, source: int, target: int, alpha: float, layers=BAND):
+def swapped_logits(model, tok, prompt: str, lens: JLens, source: int, target: int, alpha: float, layers=BAND,
+                   clean: dict | None = None):
     """Next-token logits at the last position, under a clamped lens-coordinate swap.
 
     The coordinates are read from a clean forward pass and written at every layer. Reading
     them during the edited pass would be wrong: the residual stream carries each edit to the
     next layer, so the next layer's swap would undo it.
+
+    clean: the prompt's stored activations, if the caller already has them.
     """
     device = next(model.parameters()).device
     ids = tok(prompt, return_tensors="pt").input_ids.to(device)
-    clean, _ = residuals(model, ids, layers)
+    if clean is None:
+        clean, _ = residuals(model, ids, layers)
 
     def make_hook(layer):
         V = lens_vectors(model, lens, layer, [source, target])
-        V_pinv = torch.linalg.pinv(V)
+        # Pseudoinverse of a [d, 2] matrix with independent columns: (V^T V)^-1 V^T.
+        V_pinv = torch.linalg.solve(V.T @ V, V.T)
         c_clean = clean[layer].float() @ V_pinv.T  # [1, T, 2]
         wanted = c_clean + alpha * (c_clean.flip(-1) - c_clean)
 
@@ -136,14 +141,24 @@ def swapped_logits(model, tok, prompt: str, lens: JLens, source: int, target: in
             handle.remove()
 
 
-def run_swap_trial(model, tok, template: dict, trial: dict, lens: JLens, alpha: float, layers=BAND) -> dict:
-    """Swap the prompt's argument (source) for another (target) and read the output."""
+def run_swap_trial(model, tok, template: dict, trial: dict, lens: JLens, alpha: float, layers=BAND,
+                   stored: dict | None = None) -> dict:
+    """Swap the prompt's argument (source) for another (target) and read the output.
+
+    stored: {prompt: (clean activations, plain next-token log-probs)}, filled as prompts are met,
+    so that a prompt's unedited forward pass runs once across all its trials.
+    """
     args = {r["arg"]: r for r in template["results"]}
     source, target = args[trial["source"]], args[trial["target"]]
     prompt = template["template"].replace("{arg}", trial["source"])
-    logits = swapped_logits(model, tok, prompt, lens, source["arg_token"], target["arg_token"], alpha, layers)
+    stored = {} if stored is None else stored
+    if prompt not in stored:
+        ids = tok(prompt, return_tensors="pt").input_ids.to(next(model.parameters()).device)
+        clean, logits = residuals(model, ids, layers)
+        stored[prompt] = (clean, logits[0, -1].log_softmax(-1))
+    clean, plain = stored[prompt]
+    logits = swapped_logits(model, tok, prompt, lens, source["arg_token"], target["arg_token"], alpha, layers, clean)
     logp = logits.log_softmax(-1)
-    plain = model(input_ids=tok(prompt, return_tensors="pt").input_ids.to(logits.device)).logits[0, -1].float().log_softmax(-1)
     t, s = target["answer_token"], source["answer_token"]
     return {"pass": int(logits.argmax()) == t,
             "target_rank": int((logits > logits[t]).sum()),
@@ -152,12 +167,12 @@ def run_swap_trial(model, tok, template: dict, trial: dict, lens: JLens, alpha: 
 
 def swap_results(model, tok, templates: list[dict], lens: JLens, alphas=(1.0, 2.0), layers=BAND) -> dict[str, list[dict]]:
     """{str(alpha): one record per trial, each naming its template}."""
-    results = {}
+    results, stored = {}, {}
     for alpha in alphas:
         records = []
         for t_index, template in enumerate(templates):
             for trial in template["trials"]:
-                record = run_swap_trial(model, tok, template, trial, lens, alpha, layers)
+                record = run_swap_trial(model, tok, template, trial, lens, alpha, layers, stored)
                 records.append({"template": t_index, **record})
         results[str(alpha)] = records
     return results

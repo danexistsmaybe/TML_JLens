@@ -296,6 +296,43 @@ def metric_edit_prediction_is_exact_for_exact_jacobian():
 
 
 @check
+def metric_edit_batching_matches_a_single_full_pass():
+    """The batched edit expands copies at the edited layer. Compare with a plain, unbatched run."""
+    model = Context.model
+    window = small_windows("wiki", 1)[0]
+    device = next(model.parameters()).device
+    layer, size = 12, 2.0
+    lens = JLens.identity([12], 896)
+    records = edit_trials(model, lens, window, layer, {0.05: size})
+    r = records[0]
+    assert r["sign"] == 1.0
+    ids = window.ids_tensor(device)
+    W_c = model.lm_head.weight[r["token"]].float()
+    v = W_c / W_c.norm()  # the identity lens's direction
+
+    def add(module, inputs, output):
+        h = (output if torch.is_tensor(output) else output[0]).clone()
+        h[0, r["position"]] += size * v
+        return h if torch.is_tensor(output) else (h, *output[1:])
+
+    with torch.no_grad(), record_residuals(model, [23]) as clean:
+        model.model(input_ids=ids)
+    base = clean[23].float()
+    handle = model.model.layers[layer].register_forward_hook(add)
+    try:
+        with torch.no_grad(), record_residuals(model, [23]) as edited:
+            model.model(input_ids=ids)
+    finally:
+        handle.remove()
+    P = valid_positions(128).to(device)
+    P = P[P >= r["position"]]
+    actual = float(((edited[23].float() - base)[0, P] @ W_c).sum())
+    gap = abs(actual - r["actual"]) / abs(actual)
+    assert gap < 1e-3, (actual, r["actual"])
+    return f"batched and single-pass changes agree within {gap:.1e}"
+
+
+@check
 def metric_edit_positions_are_fixed_and_valid():
     window = small_windows("wiki", 1)[0]
     a, b = edit_positions(window), edit_positions(window)
@@ -349,7 +386,7 @@ def swap_alpha_zero_does_nothing_and_alpha_one_swaps_coordinates():
     layer = BAND[-1]
     clean, _ = residuals(model, ids, BAND)
     V = lens_vectors(model, lens, layer, [source, target])
-    pinv = torch.linalg.pinv(V)
+    pinv = torch.linalg.pinv(V)  # the slow general form, as a check on the closed form in the code
     wanted = (clean[layer].float() @ pinv.T).flip(-1)
     seen = {}
 
@@ -432,17 +469,15 @@ def end_to_end_on_validation():
 @check
 def dry_run_of_all_experiments(tmp=E.REPO / "results" / "dry_run"):
     """The real runner and analysis on 30 fit windows per domain, with results kept separately."""
-    import shutil
-
     from analysis import summarize
 
-    shutil.rmtree(tmp, ignore_errors=True)
+    # Delete results/dry_run for a fresh start; finished lenses are otherwise skipped, as in a real run.
     saved = {k: getattr(E, k) for k in ("FIT_SIZE", "POOL_PER_CORPUS", "GRID", "SEEDS", "RAW", "SETTINGS_PATH",
                                         "SAMPLE_COUNTS", "EXP3_BUDGETS", "experiment3_universe")}
     E.FIT_SIZE, E.POOL_PER_CORPUS, E.GRID, E.SEEDS = 30, 10, [5, 10], [0, 1]
     E.SAMPLE_COUNTS, E.EXP3_BUDGETS = [5, 10], [5, 10]
     E.RAW, E.SETTINGS_PATH = tmp / "raw", tmp / "settings.json"
-    tmp.mkdir(parents=True)
+    tmp.mkdir(parents=True, exist_ok=True)
     # Experiment 3's selected windows have no Jacobians yet, so stand-ins are the fit windows.
     E.experiment3_universe = lambda: (E.domain_universe(), {d: list(E.universe_slice(d))[:10] for d in E.EXP3_DOMAINS})
     try:

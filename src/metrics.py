@@ -125,7 +125,7 @@ def edit_trials(model, lens: JLens, window: Window, layer: int, alphas: dict[flo
         J = lens.jacobians[layer].to(device)
         readings = decode(model, (h_clean[0, pos].float() @ J.T)).argmax(-1)
         Jt_w = W[readings] @ J                            # [n, d]: row form of J^T w_c
-        J_of = J[None].expand(len(pos), -1, -1)           # [n, d, d]
+        J_of = None
     else:
         J_of = directions.to(device)
         readings = decode(model, (J_of @ h_clean[0, pos].float()[..., None])[..., 0]).argmax(-1)
@@ -133,7 +133,8 @@ def edit_trials(model, lens: JLens, window: Window, layer: int, alphas: dict[flo
     lens_gain = Jt_w.norm(dim=-1)                         # ||J^T w_c||
     v = Jt_w / lens_gain[:, None]
 
-    # One forward pass on one copy per edit. Edits at a position only change later positions.
+    # One copy per edit, created at the edited layer: earlier layers are the same for every copy.
+    # The later blocks broadcast their shared position and mask inputs across the copies.
     cases = [(i, frac, size, sign) for i in range(len(pos)) for frac, size in alphas.items() for sign in (1.0, -1.0)]
     which = torch.tensor([c[0] for c in cases], device=device)
     signed = torch.tensor([c[2] * c[3] for c in cases], device=device, dtype=torch.float32)
@@ -141,14 +142,14 @@ def edit_trials(model, lens: JLens, window: Window, layer: int, alphas: dict[flo
 
     def add_edit(module, inputs, output):
         h = output if torch.is_tensor(output) else output[0]
-        edited = h.clone()
+        edited = h.expand(len(cases), -1, -1).clone()
         edited[copies, pos[which]] += (signed[:, None] * v[which]).to(h.dtype)
         return edited if torch.is_tensor(output) else (edited, *output[1:])
 
     handle = model.model.layers[layer].register_forward_hook(add_edit)
     try:
         with record_residuals(model, [tgt]) as edited_acts:
-            model.model(input_ids=ids.expand(len(cases), -1))
+            model.model(input_ids=ids, use_cache=False)
     finally:
         handle.remove()
 
@@ -161,7 +162,8 @@ def edit_trials(model, lens: JLens, window: Window, layer: int, alphas: dict[flo
     predicted = signed * lens_gain[which]
 
     # Across the whole vocabulary: does the lens predict the direction of the output's change?
-    predicted_final = (J_of[which] @ (signed[:, None] * v[which])[..., None])[..., 0]  # J v, [B, d]
+    edit = signed[:, None] * v[which]                         # [B, d]
+    predicted_final = edit @ J.T if J_of is None else (J_of[which] @ edit[..., None])[..., 0]  # J v
     a = summed @ W.T
     b = predicted_final @ W.T
     a, b = a - a.mean(-1, keepdim=True), b - b.mean(-1, keepdim=True)
