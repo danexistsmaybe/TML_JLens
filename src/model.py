@@ -6,7 +6,7 @@ Conventions used everywhere in this project:
   * The TARGET layer of the J-lens is the last block's output (layer 23), BEFORE the
     final RMSNorm.
   * decode(h) = lm_head(final_norm(h)). On the target layer this reproduces the model's
-    own logits exactly (checked in src/check_jacobian.py).
+    own logits exactly (checked in tests/check_jacobian.py).
 """
 from __future__ import annotations
 
@@ -79,6 +79,14 @@ def record_residuals(model, layers, grad_root: int | None = None):
     finally:
         for handle in handles:
             handle.remove()
+
+
+@torch.no_grad()
+def block_outputs(model, input_ids: torch.Tensor, layers) -> dict[int, torch.Tensor]:
+    """Like residuals, without the logits. For large batches: logits take far more memory."""
+    with record_residuals(model, layers) as acts:
+        model.model(input_ids=input_ids)
+    return {l: h.detach() for l, h in acts.items()}
 
 
 @torch.no_grad()

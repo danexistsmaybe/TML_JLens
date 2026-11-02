@@ -1,6 +1,4 @@
-"""Scoring a lens on the prompt sets: pass@k and swap success.
-
-    .venv/bin/python -m src.eval_prompts     # smoke test on VALIDATION prompts only
+"""Scoring a lens on the prompt sets: pass@k and swap success. Returns scores per prompt and trial.
 
 Pass@k: the best rank of the intermediate in the lens readout at the last position, over a
 band of layers. A word counts in any casing, with or without a leading space. The control
@@ -17,20 +15,18 @@ two tokens alike.
 """
 from __future__ import annotations
 
-import json
+import math
 
 import torch
 
-from .check_prompts import DOMAINS, OUT, word_key
-from .corpus import load_windows
+from .check_prompts import word_key
 from .jlens import JLens
-from .model import load_model, residuals
-from .store import fit_lens
+from .model import residuals
 
 BAND = list(range(9, 23))  # the paper's workspace band (38-92% of depth), scaled to 24 blocks
 KS = (1, 5, 10, 50)
+AUC_KS = (1, 2, 5, 10, 20, 50, 100, 200, 500, 1000)  # log-spaced, for the area under pass@k
 CORPUS = {"wiki": "wikitext", "stories": "tinystories", "python": "python"}
-SMOKE_WINDOWS = 30
 
 
 def word_tokens(tok, word: str) -> list[int]:
@@ -45,30 +41,59 @@ def word_tokens(tok, word: str) -> list[int]:
     return sorted(ids)
 
 
+# ---------------------------------------------------------------------------------------
+# Pass@k
+# ---------------------------------------------------------------------------------------
+
 @torch.no_grad()
-def best_ranks(model, tok, prompt: str, lens: JLens, words: dict[str, str], layers=BAND) -> dict[str, int]:
-    """{name: best 0-based rank of that word in the readout at the last position, over layers}."""
+def prepare_pass(model, tok, items: list[dict], layers=BAND, prefix: str = "") -> list[dict]:
+    """Run each prompt once, so every lens reads the same stored activations."""
     device = next(model.parameters()).device
-    ids = tok(prompt, return_tensors="pt").input_ids.to(device)
-    acts, _ = residuals(model, ids, layers)
-    token_sets = {name: torch.tensor(word_tokens(tok, w), device=device) for name, w in words.items()}
-    best = {name: 10**9 for name in words}
-    for layer in layers:
-        logits = lens.logits(model, acts[layer][0, -1], layer)
-        order = logits.argsort(descending=True)
-        rank = torch.empty_like(order)
-        rank[order] = torch.arange(len(order), device=device)
-        for name, tokens in token_sets.items():
-            best[name] = min(best[name], int(rank[tokens].min()))
-    return best
+    prepared = []
+    for item in items:
+        ids = tok(prefix + item["prompt"], return_tensors="pt").input_ids.to(device)
+        acts, _ = residuals(model, ids, layers)
+        prepared.append({"h": {l: acts[l][0, -1] for l in layers},
+                         "target": torch.tensor(word_tokens(tok, item["intermediate"]), device=device),
+                         "control": torch.tensor(word_tokens(tok, item["control"]), device=device)})
+    return prepared
 
 
-def score_pass(model, tok, items: list[dict], lens: JLens, layers=BAND) -> dict:
-    ranks = [best_ranks(model, tok, i["prompt"], lens, {"target": i["intermediate"], "control": i["control"]}, layers)
-             for i in items]
-    return {f"pass@{k}": {"target": sum(r["target"] < k for r in ranks) / len(ranks),
-                          "control": sum(r["control"] < k for r in ranks) / len(ranks)} for k in KS}
+@torch.no_grad()
+def pass_ranks(model, prepared: list[dict], lens: JLens, layers=BAND) -> list[dict]:
+    """Per prompt: {"target": {layer: rank}, "control": {layer: rank}}, 0-based."""
+    results = []
+    for p in prepared:
+        ranks = {"target": {}, "control": {}}
+        for layer in layers:
+            logits = lens.logits(model, p["h"][layer], layer)
+            for name in ("target", "control"):
+                ranks[name][layer] = int((logits > logits[p[name]].max()).sum())
+        results.append(ranks)
+    return results
 
+
+def pass_summary(ranks: list[dict], layers=BAND) -> dict:
+    """Pass rates and normalized area under pass@k, over a set of layers (the best rank counts)."""
+    best = {name: [min(r[name][l] for l in layers) for r in ranks] for name in ("target", "control")}
+    summary = {}
+    for name, values in best.items():
+        summary[name] = {f"pass@{k}": sum(v < k for v in values) / len(values) for k in KS}
+        summary[name]["auc"] = sum(auc_of_rank(v) for v in values) / len(values)
+    return summary
+
+
+def auc_of_rank(rank: int) -> float:
+    """One prompt's area under pass@k against log k, scaled so that always ranking first gives 1."""
+    logs = [math.log(k) for k in AUC_KS]
+    passes = [float(rank < k) for k in AUC_KS]
+    area = sum((logs[i + 1] - logs[i]) * (passes[i] + passes[i + 1]) / 2 for i in range(len(logs) - 1))
+    return area / (logs[-1] - logs[0])
+
+
+# ---------------------------------------------------------------------------------------
+# Swaps
+# ---------------------------------------------------------------------------------------
 
 def lens_vectors(model, lens: JLens, layer: int, tokens: list[int]) -> torch.Tensor:
     """[d, n] unit-length lens vectors, one column per token."""
@@ -125,34 +150,14 @@ def run_swap_trial(model, tok, template: dict, trial: dict, lens: JLens, alpha: 
             "logp_shift": float((logp[t] - logp[s]) - (plain[t] - plain[s]))}
 
 
-def score_swap(model, tok, templates: list[dict], lens: JLens, alpha: float, layers=BAND) -> dict:
-    results = [run_swap_trial(model, tok, t, trial, lens, alpha, layers) for t in templates for trial in t["trials"]]
-    return {"trials": len(results), "success": sum(r["pass"] for r in results) / len(results),
-            "mean_logp_shift": sum(r["logp_shift"] for r in results) / len(results)}
-
-
-def main():
-    """Fit a small lens on each domain and score the VALIDATION prompts. Test stays untouched."""
-    model, tok = load_model()
-    pass_sets = json.loads((OUT / "pass_at_k.json").read_text())
-    swap_sets = json.loads((OUT / "swap.json").read_text())
-    lenses = {"logit lens": JLens.identity(BAND, model.config.hidden_size)}
-    for domain in DOMAINS:
-        lenses[f"{domain} ({SMOKE_WINDOWS} windows)"] = fit_lens(
-            model, load_windows(CORPUS[domain], "fit", n=SMOKE_WINDOWS), layers=list(range(23)))
+def swap_results(model, tok, templates: list[dict], lens: JLens, alphas=(1.0, 2.0), layers=BAND) -> dict[str, list[dict]]:
+    """{str(alpha): one record per trial, each naming its template}."""
     results = {}
-    for domain in DOMAINS:
-        for name, lens in lenses.items():
-            entry = {"pass": score_pass(model, tok, pass_sets[domain]["val"], lens),
-                     "swap_alpha_1": score_swap(model, tok, swap_sets[domain]["val"], lens, 1.0),
-                     "swap_alpha_2": score_swap(model, tok, swap_sets[domain]["val"], lens, 2.0)}
-            results.setdefault(domain, {})[name] = entry
-            print(domain, "|", name, "| pass@10 target/control:", entry["pass"]["pass@10"]["target"],
-                  entry["pass"]["pass@10"]["control"], "| swap a=1:", round(entry["swap_alpha_1"]["success"], 3),
-                  "a=2:", round(entry["swap_alpha_2"]["success"], 3),
-                  "| shift a=1:", round(entry["swap_alpha_1"]["mean_logp_shift"], 2), flush=True)
-    (OUT / "smoke_validation.json").write_text(json.dumps(results, indent=1))
-
-
-if __name__ == "__main__":
-    main()
+    for alpha in alphas:
+        records = []
+        for t_index, template in enumerate(templates):
+            for trial in template["trials"]:
+                record = run_swap_trial(model, tok, template, trial, lens, alpha, layers)
+                records.append({"template": t_index, **record})
+        results[str(alpha)] = records
+    return results

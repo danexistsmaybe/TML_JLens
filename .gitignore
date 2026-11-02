@@ -11,3 +11,7 @@ data/lenses/
 
 # Generated analysis output (scripts are tracked, their outputs are not)
 analysis/out/
+
+# Experiment outputs: per-item scores are regenerable; tables, summaries and figures are tracked.
+results/raw/
+logs/

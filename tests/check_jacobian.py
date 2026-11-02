@@ -1,6 +1,6 @@
 """Correctness checks for the hooks, the decode convention, and the Jacobian estimator.
 
-    python -m src.check_jacobian        # ~2 min on GPU; prints PASS/FAIL
+    python -m tests.check_jacobian        # ~2 min on GPU; prints PASS/FAIL
 
   A. Hooks: our block-output hooks equal HF's hidden_states[l + 1].
   B. Decode: decode(target layer) reproduces the model's own logits.
@@ -20,9 +20,9 @@ os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
 
 import torch  # noqa: E402
 
-from .corpus import load_windows  # noqa: E402
-from .jlens import valid_positions, window_jacobians  # noqa: E402
-from .model import decode, load_model, record_residuals, target_layer  # noqa: E402
+from src.corpus import load_windows  # noqa: E402
+from src.jlens import valid_positions, window_jacobians  # noqa: E402
+from src.model import decode, load_model, record_residuals, target_layer  # noqa: E402
 
 
 def check_conventions(ids):
