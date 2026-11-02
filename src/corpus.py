@@ -14,6 +14,8 @@ This file provides both halves:
        wikitext    : WikiText-2 raw. fit <- train, val <- validation, test <- test.
        tinystories : TinyStories. fit <- train shard 0 (5,000 seeded stories);
                      val/test <- official validation split, partitioned BY STORY.
+       python      : real Python files, split BY PROJECT; 500 fit windows. Built separately
+                     by src/python_corpus.py, which also explains its cleaning steps.
   2. WEIGHTING SCHEMES: a weighting scheme is any function
          scheme(windows: list[Window]) -> torch.Tensor of shape [len(windows)], >= 0
      Weights are computed BEFORE any Jacobian is touched, so a scheme can only look at
@@ -35,7 +37,7 @@ from .model import DATA, MODEL_ID
 
 SPLITS_PATH = DATA / "splits.json"
 WINDOW_TOKENS = 128
-CORPORA = ("wikitext", "tinystories")
+CORPORA = ("wikitext", "tinystories", "python")
 ROLES = ("fit", "val", "test")
 
 

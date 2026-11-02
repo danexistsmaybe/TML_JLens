@@ -1,0 +1,29 @@
+{
+ "about": "First sweep (2026-11-01): 24 low-context Sonnet subagents each invented one candidate. Temperature could not be set, so each got a random starting letter for variety. The agent reviewed them; verdicts below. Used candidates are marked source=subagent in src/prompt_drafts.py.",
+ "candidates": [
+  {"kind": "multihop", "prompt": "The currency used in the country whose capital is Madrid is the", "intermediate": "Spain", "answer": "euro", "verdict": "used"},
+  {"kind": "multihop", "prompt": "The currency used in the country whose capital is Stockholm is the", "intermediate": "Sweden", "answer": "krona", "verdict": "used; answer scored by first token, kron"},
+  {"kind": "multihop", "prompt": "The author of the play Hamlet, who was born in Stratford-upon-Avon, was a native speaker of", "intermediate": "Shakespeare", "answer": "English", "verdict": "used"},
+  {"kind": "multihop", "prompt": "The animals that produce the milk used in a Wensleydale cheese are mostly", "intermediate": "sheep", "answer": "ewes", "verdict": "rejected: obscure, and the fact is doubtful"},
+  {"kind": "story", "prompt": "Tom put on his warm coat and went out to the barn. He sat on a small stool, and soon the milk went splash into the pail while the cow chewed her hay.", "intermediate": "cow", "verdict": "rejected: names the concept"},
+  {"kind": "story", "prompt": "Tom put on his warm coat and walked out to the barn. He checked the hay, and the cows were eating, and the hens were sleeping. Then he sat on a log and watched the green rows of corn grow under the sun.", "intermediate": "farm", "verdict": "used"},
+  {"kind": "story", "prompt": "Tom put on his warm coat and walked out the door. He saw the little ship sit in the dock, and he rang the bell on top of the tall tower, where the big light turned round and round to guide the boats at night.", "intermediate": "lighthouse", "verdict": "used, subject to the single-token check"},
+  {"kind": "story", "prompt": "Tom put on his warm coat and his red hat. He sat by the pond and held his little rod, waiting for a fish to pull the line.", "intermediate": "fishing", "verdict": "used"},
+  {"kind": "python", "prompt": "def f(items):\n    seen = set()\n    out = []\n    for x in items:\n        if x not in seen:\n            seen.add(x)\n            out.append(x)\n    return out\n", "intermediate": "duplicate", "verdict": "used"},
+  {"kind": "python", "prompt": "def f(items):\n    out = []\n    for x in items:\n        out.insert(0, x)\n    return out\n", "intermediate": "reverse", "verdict": "used"},
+  {"kind": "python", "prompt": "def f(items):\n    line = []\n    for x in items:\n        line.append(x)\n    return line.pop(0)\n", "intermediate": "queue", "verdict": "used"},
+  {"kind": "python", "prompt": "def f(items):\n    out = []\n    for x in items:\n        out.append(x * 1.25)\n    return sum(out) / len(out) * 0.5\n", "intermediate": "price", "verdict": "rejected: doesn't imply the concept"},
+  {"kind": "wiki swap", "template": "Fact: The chemical symbol for {arg} is", "args": ["gold", "silver", "iron", "oxygen"], "verdict": "used; no answers returned, so the agent added them"},
+  {"kind": "wiki swap", "template": "Fact: The chemical symbol for {arg} is", "args": ["Neon", "Nitrogen", "Sodium", "Nickel"], "verdict": "merged with the template above (sodium)"},
+  {"kind": "wiki swap", "template": "Fact: The largest planet in the {arg} is", "args": ["Jupiter", "Saturn", "Mars", "Venus"], "verdict": "rejected: arguments don't fit the slot"},
+  {"kind": "wiki swap", "template": "Fact: The largest country in {arg} is", "args": ["Africa", "Europe", "Asia", "Australia"], "verdict": "rejected: the model fails it in probing"},
+  {"kind": "stories swap", "template": "Harry went to the hill with a {arg}. He wanted to", "args": {"sled": "slide", "kite": "fly", "shovel": "dig", "camera": "snap"}, "verdict": "used; camera answer changed to take"},
+  {"kind": "stories swap", "template": "Wendy looked at the {arg}. She wanted to", "args": {"window": "open", "worm": "dig", "wagon": "pull", "whistle": "blow"}, "verdict": "used; worm answer changed to eat"},
+  {"kind": "stories swap", "template": "In the garden, Gus saw a {arg}. He wanted to", "args": ["ball", "flower", "swing", "puddle"], "verdict": "used; no answers returned, so the agent added them"},
+  {"kind": "stories swap", "template": "Ben went to the bakery and bought a loaf of {arg}. He wanted to", "args": {"bread": "eat", "balloon": "blow", "ball": "throw", "bell": "ring"}, "verdict": "rejected: most fillings make no sense"},
+  {"kind": "python swap", "template": "def {arg}(a, b):\n    return a ", "args": {"shl": "<<", "shr": ">>", "sub": "-", "sum": "+"}, "verdict": "used; trailing space removed, sum changed to add"},
+  {"kind": "python swap", "template": "import logging\n\nlogger = logging.getLogger(__name__)\nlogger.{arg}(\"disk almost full\")\nlogger.setLevel(logging.", "args": {"debug": "DEBUG", "info": "INFO", "warning": "WARNING", "error": "ERROR"}, "verdict": "used"},
+  {"kind": "python swap", "template": "import torch\n\nx = torch.tensor([1, 2, 3])\ny = x.{arg}()\n# {arg} -> ", "args": {"tolist": "[", "item": "(", "sum": ")", "shape": "."}, "verdict": "rejected: answers are arbitrary"},
+  {"kind": "python swap", "template": "import numpy as np\n\nclass {arg}Error(Exception):\n    pass\n\ntry:\n    x = 1\nexcept {arg}Error as e:\n    raise", "args": {"Key": "x", "Value": "y", "Type": "z", "Index": "w"}, "verdict": "rejected: answers are arbitrary"}
+ ]
+}

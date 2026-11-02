@@ -3,25 +3,33 @@ disk, and average them into a lens under any weighting.
 
     windows ──(window_jacobians, cached here)──> J^(w) per window ──(weights)──> JLens
 
-Cache layout: data/jacobians/<window sha256>.pt = {layer: [d, d] float16}. One file per
+Cache layout: JACOBIAN_ROOT/<window sha256>.pt = {layer: [d, d] float16}. One file per
 window holds every layer that has been computed for it (~1.6 MB per layer). The cache is
 keyed by window content, so a window fit once is reused by every lens that includes it.
-If the model, SKIP_FIRST or the estimator changes, delete data/jacobians/.
+The folder name records SKIP_FIRST, so changing it starts a new cache. If the model or the
+estimator changes, delete the folder.
+
+The cache lives on /localtmp, this machine's local disk, because it reaches hundreds of GB.
+Nothing there is backed up, but every file can be recomputed. Set JLENS_JACOBIAN_ROOT to
+put it elsewhere.
 """
 from __future__ import annotations
 
+import os
 import time
 from pathlib import Path
 
 import torch
 
 from .corpus import Window
-from .jlens import JLens, window_jacobians
-from .model import DATA
+from .jlens import SKIP_FIRST, JLens, window_jacobians
+
+JACOBIAN_ROOT = Path(os.environ.get(
+    "JLENS_JACOBIAN_ROOT", f"/localtmp/qeq4kh/tml-j-lens/jacobians_skip{SKIP_FIRST}"))
 
 
 class JacobianStore:
-    def __init__(self, model, root: Path = DATA / "jacobians", rows_per_pass: int = 32, log=print):
+    def __init__(self, model, root: Path = JACOBIAN_ROOT, rows_per_pass: int = 32, log=print):
         self.model = model
         self.root = Path(root)
         self.root.mkdir(parents=True, exist_ok=True)

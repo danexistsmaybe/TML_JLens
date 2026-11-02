@@ -1,0 +1,3717 @@
+{
+ "wiki": {
+  "val": [
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency of the country whose capital is Washington is the",
+    "intermediate": "America",
+    "answer": "dollar",
+    "source": "agent",
+    "model_top": [
+     " US",
+     " dollar",
+     " United",
+     " U",
+     " American"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Benny",
+    "target_rank": 1651,
+    "control_rank": 1650
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Seoul speak",
+    "intermediate": "Korea",
+    "answer": "Korean",
+    "source": "agent",
+    "model_top": [
+     " Korean",
+     " the",
+     " ______",
+     " which",
+     " a"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Supreme",
+    "target_rank": 12265,
+    "control_rank": 12264
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Seoul mostly speak",
+    "intermediate": "Korea",
+    "answer": "Korean",
+    "source": "agent",
+    "model_top": [
+     " Korean",
+     " Japanese",
+     " South",
+     " the",
+     " English"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "WAS",
+    "target_rank": 12265,
+    "control_rank": 12263
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency of the country whose capital is New Delhi is the",
+    "intermediate": "India",
+    "answer": "rupee",
+    "source": "agent",
+    "model_top": [
+     " Indian",
+     " ru",
+     " Ru",
+     "\n",
+     " __"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Rock",
+    "target_rank": 2876,
+    "control_rank": 2874
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "The currency used near the Taj Mahal is the",
+    "intermediate": "India",
+    "answer": "ru",
+    "source": "agent",
+    "model_top": [
+     " Indian",
+     " ru",
+     "\n",
+     " __",
+     " ____"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Air",
+    "target_rank": 2876,
+    "control_rank": 2878
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "The currency used near the Kremlin is the",
+    "intermediate": "Moscow",
+    "answer": "rub",
+    "source": "agent",
+    "model_top": [
+     " Russian",
+     " r",
+     " rub",
+     " R",
+     " Rub"
+    ],
+    "answer_rank": 3,
+    "problems": [],
+    "control": "Shadows",
+    "target_rank": 31033,
+    "control_rank": 31036
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Amsterdam speak",
+    "intermediate": "Netherlands",
+    "answer": "Dutch",
+    "source": "agent",
+    "model_top": [
+     " Dutch",
+     " ______",
+     " a",
+     " the",
+     " English"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Stef",
+    "target_rank": 9507,
+    "control_rank": 9505
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Rome speak",
+    "intermediate": "Italy",
+    "answer": "Italian",
+    "source": "agent",
+    "model_top": [
+     " Latin",
+     " a",
+     " Italian",
+     " the",
+     " ______"
+    ],
+    "answer_rank": 3,
+    "problems": [],
+    "control": "Minister",
+    "target_rank": 6220,
+    "control_rank": 6221
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Rome mostly speak",
+    "intermediate": "Italy",
+    "answer": "Italian",
+    "source": "agent",
+    "model_top": [
+     " Italian",
+     " Latin",
+     " Spanish",
+     " the",
+     " English"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Abu",
+    "target_rank": 6220,
+    "control_rank": 6218
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The capital of the country where the Colosseum stands is",
+    "intermediate": "Italy",
+    "answer": "Rome",
+    "source": "agent",
+    "model_top": [
+     " Rome",
+     " called",
+     " the",
+     " in",
+     " Florence"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Conference",
+    "target_rank": 6220,
+    "control_rank": 6224
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The capital of the country where pizza was invented is",
+    "intermediate": "Italy",
+    "answer": "Rome",
+    "source": "agent",
+    "model_top": [
+     " Rome",
+     " in",
+     " New",
+     " Chicago",
+     " called"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Are",
+    "target_rank": 6220,
+    "control_rank": 6234
+   }
+  ],
+  "test": [
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Paris speak",
+    "intermediate": "France",
+    "answer": "French",
+    "source": "agent",
+    "model_top": [
+     " French",
+     " ______",
+     " a",
+     " the",
+     " ("
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Love",
+    "target_rank": 2178,
+    "control_rank": 2180
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "The language spoken at the Eiffel Tower is",
+    "intermediate": "Paris",
+    "answer": "French",
+    "source": "agent",
+    "model_top": [
+     " French",
+     " ______",
+     " ____",
+     " a",
+     " called"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Anderson",
+    "target_rank": 4224,
+    "control_rank": 4226
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency of the country whose capital is Beijing is the",
+    "intermediate": "China",
+    "answer": "yuan",
+    "source": "agent",
+    "model_top": [
+     " Ren",
+     " R",
+     " yuan",
+     " ____",
+     " __"
+    ],
+    "answer_rank": 3,
+    "problems": [],
+    "control": "Football",
+    "target_rank": 4500,
+    "control_rank": 4499
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Madrid speak",
+    "intermediate": "Spain",
+    "answer": "Spanish",
+    "source": "agent",
+    "model_top": [
+     " Spanish",
+     " a",
+     " the",
+     " (",
+     " which"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Dave",
+    "target_rank": 4962,
+    "control_rank": 4958
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The first name of the author of Hamlet is",
+    "intermediate": "Shakespeare",
+    "answer": "William",
+    "source": "agent",
+    "model_top": [
+     " William",
+     " O",
+     " Ham",
+     " Shakespeare",
+     " Claud"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Allah",
+    "target_rank": 9389,
+    "control_rank": 9388
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Ankara mostly speak",
+    "intermediate": "Turkey",
+    "answer": "Turkish",
+    "source": "agent",
+    "model_top": [
+     " Turkish",
+     " German",
+     " Kurdish",
+     " the",
+     " Turk"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Cruise",
+    "target_rank": 18017,
+    "control_rank": 18016
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Berlin speak",
+    "intermediate": "Germany",
+    "answer": "German",
+    "source": "agent",
+    "model_top": [
+     " German",
+     " a",
+     " ______",
+     " (",
+     " the"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Year",
+    "target_rank": 4229,
+    "control_rank": 4228
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Visitors to Mount Fuji hear people speaking",
+    "intermediate": "Japan",
+    "answer": "Japanese",
+    "source": "agent",
+    "model_top": [
+     " in",
+     " Japanese",
+     " English",
+     " a",
+     " the"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Mos",
+    "target_rank": 3423,
+    "control_rank": 3425
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Paris mostly speak",
+    "intermediate": "France",
+    "answer": "French",
+    "source": "agent",
+    "model_top": [
+     " French",
+     " french",
+     " English",
+     " the",
+     " German"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Brown",
+    "target_rank": 2178,
+    "control_rank": 2170
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Ankara speak",
+    "intermediate": "Turkey",
+    "answer": "Turkish",
+    "source": "agent",
+    "model_top": [
+     " Turkish",
+     " ______",
+     " the",
+     " which",
+     " a"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Lorenzo",
+    "target_rank": 18017,
+    "control_rank": 18018
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "The author of the play Hamlet, who was born in Stratford-upon-Avon, was a native speaker of",
+    "intermediate": "Shakespeare",
+    "answer": "English",
+    "source": "subagent",
+    "model_top": [
+     " which",
+     " ______",
+     " English",
+     " what",
+     " _____"
+    ],
+    "answer_rank": 3,
+    "problems": [],
+    "control": "Hospital",
+    "target_rank": 9389,
+    "control_rank": 9387
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Warsaw mostly speak",
+    "intermediate": "Poland",
+    "answer": "Polish",
+    "source": "agent",
+    "model_top": [
+     " Polish",
+     " German",
+     " Russian",
+     " the",
+     " English"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Germans",
+    "target_rank": 9277,
+    "control_rank": 9276
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Stockholm speak",
+    "intermediate": "Sweden",
+    "answer": "Swedish",
+    "source": "agent",
+    "model_top": [
+     " Swedish",
+     " ______",
+     " the",
+     " which",
+     " ("
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Abbey",
+    "target_rank": 12860,
+    "control_rank": 12859
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The month after the month of Christmas is",
+    "intermediate": "December",
+    "answer": "January",
+    "source": "agent",
+    "model_top": [
+     " the",
+     " December",
+     " January",
+     " called",
+     " New"
+    ],
+    "answer_rank": 3,
+    "problems": [],
+    "control": "File",
+    "target_rank": 1152,
+    "control_rank": 1151
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency of the country whose capital is Berlin is the",
+    "intermediate": "Germany",
+    "answer": "euro",
+    "source": "agent",
+    "model_top": [
+     " euro",
+     " Euro",
+     " Deutsche",
+     " German",
+     " ("
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "For",
+    "target_rank": 4229,
+    "control_rank": 4236
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Kiev speak",
+    "intermediate": "Ukraine",
+    "answer": "Ukrainian",
+    "source": "agent",
+    "model_top": [
+     " Ukrainian",
+     " the",
+     " ______",
+     " a",
+     " ("
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Feast",
+    "target_rank": 24621,
+    "control_rank": 24622
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The capital of the country of the pyramids of Giza is",
+    "intermediate": "Egypt",
+    "answer": "Cairo",
+    "source": "agent",
+    "model_top": [
+     " Cairo",
+     " Lux",
+     " Kh",
+     " The",
+     " the"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Where",
+    "target_rank": 6216,
+    "control_rank": 6210
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency of the country whose capital is London is the",
+    "intermediate": "Britain",
+    "answer": "pound",
+    "source": "agent",
+    "model_top": [
+     " pound",
+     " British",
+     " Pound",
+     "\n",
+     " __"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Hall",
+    "target_rank": 3001,
+    "control_rank": 3002
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Moscow speak",
+    "intermediate": "Russia",
+    "answer": "Russian",
+    "source": "agent",
+    "model_top": [
+     " Russian",
+     " ______",
+     " a",
+     " (",
+     " the"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Kansas",
+    "target_rank": 10935,
+    "control_rank": 10933
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The chemical symbol of the lightest gas is",
+    "intermediate": "hydrogen",
+    "answer": "H",
+    "source": "agent",
+    "model_top": [
+     " H",
+     " L",
+     " hydrogen",
+     " He",
+     " h"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "commanders",
+    "target_rank": 13293,
+    "control_rank": 13294
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Athens mostly speak",
+    "intermediate": "Greece",
+    "answer": "Greek",
+    "source": "agent",
+    "model_top": [
+     " Greek",
+     " the",
+     " Italian",
+     " English",
+     " a"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Pittsburgh",
+    "target_rank": 19876,
+    "control_rank": 19875
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Beijing speak",
+    "intermediate": "China",
+    "answer": "Chinese",
+    "source": "agent",
+    "model_top": [
+     " ______",
+     " Chinese",
+     " (",
+     " ____",
+     " which"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Jackson",
+    "target_rank": 4500,
+    "control_rank": 4497
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The first name of the first president of the United States is",
+    "intermediate": "Washington",
+    "answer": "George",
+    "source": "agent",
+    "model_top": [
+     " George",
+     " John",
+     " James",
+     " Thomas",
+     " Abraham"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "News",
+    "target_rank": 5276,
+    "control_rank": 5275
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Berlin mostly speak",
+    "intermediate": "Germany",
+    "answer": "German",
+    "source": "agent",
+    "model_top": [
+     " German",
+     " English",
+     " the",
+     " a",
+     " Russian"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Because",
+    "target_rank": 4229,
+    "control_rank": 4215
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Tehran speak",
+    "intermediate": "Iran",
+    "answer": "Persian",
+    "source": "agent",
+    "model_top": [
+     " ______",
+     " a",
+     " Persian",
+     " the",
+     " which"
+    ],
+    "answer_rank": 3,
+    "problems": [],
+    "control": "Kits",
+    "target_rank": 25374,
+    "control_rank": 25373
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The color of the planet fourth from the Sun is",
+    "intermediate": "Mars",
+    "answer": "red",
+    "source": "agent",
+    "model_top": [
+     " blue",
+     " red",
+     " yellow",
+     " orange",
+     " green"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Briggs",
+    "target_rank": 12459,
+    "control_rank": 12460
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency used in the country whose capital is Madrid is the",
+    "intermediate": "Spain",
+    "answer": "euro",
+    "source": "subagent",
+    "model_top": [
+     " Spanish",
+     " euro",
+     " (",
+     "\n",
+     " Euro"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Here",
+    "target_rank": 4962,
+    "control_rank": 4972
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Oslo speak",
+    "intermediate": "Norway",
+    "answer": "Norwegian",
+    "source": "agent",
+    "model_top": [
+     " Norwegian",
+     " ______",
+     " a",
+     " the",
+     " which"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Moore",
+    "target_rank": 10241,
+    "control_rank": 10244
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The language in which Tolstoy wrote was",
+    "intermediate": "Russia",
+    "answer": "Russian",
+    "source": "agent",
+    "model_top": [
+     " Russian",
+     " a",
+     " called",
+     " the",
+     " not"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Initially",
+    "target_rank": 10935,
+    "control_rank": 10937
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency used in the country whose capital is Stockholm is the",
+    "intermediate": "Sweden",
+    "answer": "kron",
+    "source": "subagent",
+    "model_top": [
+     " Swedish",
+     " kron",
+     " Kron",
+     " (",
+     " SE"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Colon",
+    "target_rank": 12860,
+    "control_rank": 12858
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Helsinki speak",
+    "intermediate": "Finland",
+    "answer": "Finnish",
+    "source": "agent",
+    "model_top": [
+     " Finnish",
+     " ______",
+     " the",
+     " which",
+     " a"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Beau",
+    "target_rank": 18905,
+    "control_rank": 18907
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Visitors to the Kremlin hear people speaking",
+    "intermediate": "Russia",
+    "answer": "Russian",
+    "source": "agent",
+    "model_top": [
+     " Russian",
+     " in",
+     " English",
+     " to",
+     " the"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Arsenal",
+    "target_rank": 10935,
+    "control_rank": 10938
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Lisbon mostly speak",
+    "intermediate": "Portugal",
+    "answer": "Portuguese",
+    "source": "agent",
+    "model_top": [
+     " Portuguese",
+     " Portug",
+     " Spanish",
+     " port",
+     " the"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Massachusetts",
+    "target_rank": 10248,
+    "control_rank": 10252
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Tokyo speak",
+    "intermediate": "Japan",
+    "answer": "Japanese",
+    "source": "agent",
+    "model_top": [
+     " Japanese",
+     " ______",
+     " a",
+     " which",
+     " the"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Node",
+    "target_rank": 3423,
+    "control_rank": 3417
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The first name of the scientist who developed relativity is",
+    "intermediate": "Einstein",
+    "answer": "Albert",
+    "source": "agent",
+    "model_top": [
+     " Albert",
+     " Isaac",
+     " Einstein",
+     " H",
+     " Hend"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Memphis",
+    "target_rank": 38582,
+    "control_rank": 38583
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Tokyo mostly speak",
+    "intermediate": "Japan",
+    "answer": "Japanese",
+    "source": "agent",
+    "model_top": [
+     " Japanese",
+     " English",
+     " the",
+     " a",
+     " fluent"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Come",
+    "target_rank": 3423,
+    "control_rank": 3412
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Bangkok speak",
+    "intermediate": "Thailand",
+    "answer": "Thai",
+    "source": "agent",
+    "model_top": [
+     " ______",
+     " Thai",
+     " which",
+     " a",
+     " the"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Buddhist",
+    "target_rank": 17989,
+    "control_rank": 17992
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The chemical symbol of the gas we breathe to live is",
+    "intermediate": "oxygen",
+    "answer": "O",
+    "source": "agent",
+    "model_top": [
+     " O",
+     " H",
+     " oxygen",
+     " carbon",
+     " N"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "pigeon",
+    "target_rank": 8046,
+    "control_rank": 8045
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Moscow mostly speak",
+    "intermediate": "Russia",
+    "answer": "Russian",
+    "source": "agent",
+    "model_top": [
+     " Russian",
+     " the",
+     " English",
+     " russian",
+     " Y"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Mal",
+    "target_rank": 10935,
+    "control_rank": 10939
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Budapest speak",
+    "intermediate": "Hungary",
+    "answer": "Hungarian",
+    "source": "agent",
+    "model_top": [
+     " Hungarian",
+     " a",
+     " the",
+     " (",
+     " ____"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Drama",
+    "target_rank": 19370,
+    "control_rank": 19369
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "The currency used near Mount Fuji is the",
+    "intermediate": "Japan",
+    "answer": "yen",
+    "source": "agent",
+    "model_top": [
+     " Japanese",
+     " yen",
+     " Y",
+     " US",
+     " J"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Western",
+    "target_rank": 3423,
+    "control_rank": 3443
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency of the country whose capital is Tokyo is the",
+    "intermediate": "Japan",
+    "answer": "yen",
+    "source": "agent",
+    "model_top": [
+     " yen",
+     " Japanese",
+     " __",
+     " Y",
+     " ("
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Great",
+    "target_rank": 3423,
+    "control_rank": 3401
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Copenhagen speak",
+    "intermediate": "Denmark",
+    "answer": "Danish",
+    "source": "agent",
+    "model_top": [
+     " Danish",
+     " a",
+     " ______",
+     " the",
+     " ("
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Fifth",
+    "target_rank": 16816,
+    "control_rank": 16819
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The capital of the country where sushi comes from is",
+    "intermediate": "Japan",
+    "answer": "Tokyo",
+    "source": "agent",
+    "model_top": [
+     " Tokyo",
+     " called",
+     " Osaka",
+     " N",
+     " Kyoto"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Client",
+    "target_rank": 3423,
+    "control_rank": 3398
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "The currency of the country whose capital is Moscow is the",
+    "intermediate": "Russia",
+    "answer": "rub",
+    "source": "agent",
+    "model_top": [
+     " rub",
+     " Russian",
+     " r",
+     " R",
+     " US"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Legacy",
+    "target_rank": 10935,
+    "control_rank": 10943
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Athens speak",
+    "intermediate": "Greece",
+    "answer": "Greek",
+    "source": "agent",
+    "model_top": [
+     " ______",
+     " Greek",
+     " a",
+     " the",
+     " ("
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Shin",
+    "target_rank": 19876,
+    "control_rank": 19872
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Visitors to the Eiffel Tower hear people speaking",
+    "intermediate": "France",
+    "answer": "French",
+    "source": "agent",
+    "model_top": [
+     " in",
+     " French",
+     " at",
+     ",",
+     " English"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "Get",
+    "target_rank": 2178,
+    "control_rank": 2168
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "medium",
+    "prompt": "Fact: People in the city of Madrid mostly speak",
+    "intermediate": "Spain",
+    "answer": "Spanish",
+    "source": "agent",
+    "model_top": [
+     " Spanish",
+     " spanish",
+     " the",
+     " Catalan",
+     " Cast"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Joseph",
+    "target_rank": 4962,
+    "control_rank": 4938
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "easy",
+    "prompt": "The people of the country whose capital is Cairo speak",
+    "intermediate": "Egypt",
+    "answer": "Arabic",
+    "source": "agent",
+    "model_top": [
+     " Arabic",
+     " ______",
+     " a",
+     " the",
+     " which"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Label",
+    "target_rank": 6216,
+    "control_rank": 6204
+   },
+   {
+    "domain": "wiki",
+    "type": "multihop",
+    "difficulty": "hard",
+    "prompt": "Fact: The language in which Goethe wrote was",
+    "intermediate": "Germany",
+    "answer": "German",
+    "source": "agent",
+    "model_top": [
+     " German",
+     " a",
+     " the",
+     " called",
+     " Latin"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "Source",
+    "target_rank": 4229,
+    "control_rank": 4244
+   }
+  ]
+ },
+ "stories": {
+  "val": [
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "They kicked it across the field and shouted with joy when it went between the two posts. The",
+    "intermediate": "soccer",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " boys",
+     " team",
+     " two",
+     " boy",
+     " players"
+    ],
+    "problems": [],
+    "control": "micro",
+    "target_rank": 11956,
+    "control_rank": 11957
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The knight bowed to the woman with the crown, and she sat on a tall gold chair in the middle of the castle. The",
+    "intermediate": "queen",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " knight",
+     " woman",
+     " man",
+     " king",
+     " queen"
+    ],
+    "problems": [],
+    "control": "fan",
+    "target_rank": 4395,
+    "control_rank": 4394
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "Mia blew out the candles while everyone sang, and then she opened her presents. The",
+    "intermediate": "birthday",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " presents",
+     " candles",
+     " gifts",
+     " present",
+     " first"
+    ],
+    "problems": [],
+    "control": "notes",
+    "target_rank": 2696,
+    "control_rank": 2697
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "Everyone wore their best clothes. The bride smiled, the man in the suit gave her a ring, and they cut a tall white cake. The",
+    "intermediate": "wedding",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " bride",
+     " cake",
+     " wedding",
+     " groom",
+     " guests"
+    ],
+    "problems": [],
+    "control": "barn",
+    "target_rank": 6135,
+    "control_rank": 6134
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "Ben took the cookie when no one was looking. When Mom asked, he said he had not touched it, and his face went red. The",
+    "intermediate": "lie",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " cookie",
+     " best",
+     " next",
+     " word",
+     " correct"
+    ],
+    "problems": [],
+    "control": "sky",
+    "target_rank": 12722,
+    "control_rank": 12721
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "He opened the old box and his mouth fell open. Nobody had told him they were all hiding, and they jumped out and yelled. The",
+    "intermediate": "surprise",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " old",
+     " man",
+     " police",
+     " boy",
+     " box"
+    ],
+    "problems": [],
+    "control": "rock",
+    "target_rank": 944,
+    "control_rank": 943
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "They put the old toys in a bag and took them to children who had none. It made everyone feel warm inside. The",
+    "intermediate": "gift",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " old",
+     " children",
+     " toys",
+     " bag",
+     " word"
+    ],
+    "problems": [],
+    "control": "num",
+    "target_rank": 3403,
+    "control_rank": 3405
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "The big yellow car stopped at the corner each morning, and all the children climbed on with their lunch boxes. The",
+    "intermediate": "bus",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " yellow",
+     " children",
+     " little",
+     " driver",
+     " car"
+    ],
+    "problems": [],
+    "control": "destroyed",
+    "target_rank": 2790,
+    "control_rank": 2789
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "They put up the tent by the lake and made a fire. They cooked sausages on sticks and looked at the stars. The",
+    "intermediate": "camping",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " sun",
+     " next",
+     " fire",
+     " weather",
+     " children"
+    ],
+    "problems": [],
+    "control": "noon",
+    "target_rank": 16391,
+    "control_rank": 16390
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "Grey clouds filled the sky. Drops fell on the window, and Tim put on his boots to jump in the puddles. The",
+    "intermediate": "rain",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " pudd",
+     " rain",
+     " water",
+     " sun",
+     " ground"
+    ],
+    "problems": [],
+    "control": "super",
+    "target_rank": 1201,
+    "control_rank": 1202
+   }
+  ],
+  "test": [
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "Lily sat in the big chair and opened wide. The man counted her teeth and told her to brush every day. The",
+    "intermediate": "dentist",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " woman",
+     " man",
+     " little",
+     " girl",
+     " lady"
+    ],
+    "problems": [],
+    "control": "atories",
+    "target_rank": 40635,
+    "control_rank": 40636
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "She said she would come back and she did. She had told him she would help and she kept her word. The",
+    "intermediate": "promise",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " correct",
+     " under",
+     " word",
+     " sentence",
+     " man"
+    ],
+    "problems": [],
+    "control": "details",
+    "target_rank": 3562,
+    "control_rank": 3561
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "The trees were tall and dark all around them. Birds sang up high, and the path was covered with old leaves. The",
+    "intermediate": "forest",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " trees",
+     " sun",
+     " air",
+     " wind",
+     " children"
+    ],
+    "problems": [],
+    "control": "mum",
+    "target_rank": 651,
+    "control_rank": 652
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "He turned off the light and climbed under the blanket. Mom kissed him goodnight and he closed his eyes. The",
+    "intermediate": "sleep",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " next",
+     " light",
+     " room",
+     " sun",
+     " blanket"
+    ],
+    "problems": [],
+    "control": "orange",
+    "target_rank": 1588,
+    "control_rank": 1587
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The sun was hot and the days were long. They ate ice cream, swam in the pool and had no school at all. The",
+    "intermediate": "summer",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " students",
+     " kids",
+     " children",
+     " sun",
+     " school"
+    ],
+    "problems": [],
+    "control": "introduced",
+    "target_rank": 2591,
+    "control_rank": 2590
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "She put on her soft shoes with long ribbons and twirled across the stage to the music. The",
+    "intermediate": "dance",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " audience",
+     " crowd",
+     " music",
+     " children",
+     " girls"
+    ],
+    "problems": [],
+    "control": "ised",
+    "target_rank": 1852,
+    "control_rank": 1851
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "It was small and soft. It said meow, drank milk from a bowl and sat in the sun all day. The",
+    "intermediate": "cat",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " sun",
+     " dog",
+     " cat",
+     " next",
+     " little"
+    ],
+    "problems": [],
+    "control": "hard",
+    "target_rank": 520,
+    "control_rank": 522
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The moon was high and the owl hooted. All the houses were dark and everyone was asleep. The",
+    "intermediate": "night",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " moon",
+     " owl",
+     " little",
+     " cat",
+     " sun"
+    ],
+    "problems": [],
+    "control": "life",
+    "target_rank": 657,
+    "control_rank": 658
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "Mom opened the book at bedtime and read about a bear who lost his hat. Tim asked her to read it again. The",
+    "intermediate": "story",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " bear",
+     " next",
+     " book",
+     " following",
+     " story"
+    ],
+    "problems": [],
+    "control": "noticed",
+    "target_rank": 620,
+    "control_rank": 618
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "Ben made a big ball, then a small ball, and put a carrot on top for a nose. It was cold, and his hands were wet. The",
+    "intermediate": "winter",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " ball",
+     " carrot",
+     " cold",
+     " small",
+     " next"
+    ],
+    "problems": [],
+    "control": "attacks",
+    "target_rank": 4102,
+    "control_rank": 4101
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "Round and round it went, with horses going up and down and music playing at the fair. The",
+    "intermediate": "carousel",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " children",
+     " fair",
+     " crowd",
+     " horses",
+     " little"
+    ],
+    "problems": [],
+    "control": "overview",
+    "target_rank": 127386,
+    "control_rank": 59999
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "He went up the ladder and sat high in the branches. He could see all the way to the river from up there. The",
+    "intermediate": "tree",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " sun",
+     " tree",
+     " trees",
+     " river",
+     " ladder"
+    ],
+    "problems": [],
+    "control": "self",
+    "target_rank": 259,
+    "control_rank": 260
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "The clown fell down and the lions jumped through a ring of fire. The crowd in the big tent clapped. The",
+    "intermediate": "circus",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " clown",
+     " cl",
+     " circus",
+     " lion",
+     " crowd"
+    ],
+    "problems": [],
+    "control": "folding",
+    "target_rank": 15426,
+    "control_rank": 15425
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The two boys would not share. They pushed each other and yelled, and soon both of them were crying on the floor. The",
+    "intermediate": "fight",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " teacher",
+     " two",
+     " other",
+     " boy",
+     " girl"
+    ],
+    "problems": [],
+    "control": "monster",
+    "target_rank": 1960,
+    "control_rank": 1959
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "The bright lights went up in the sky, boom and bang. Red and gold sparks fell, and everybody said ooh. The",
+    "intermediate": "fireworks",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " sky",
+     " lights",
+     " whole",
+     " sun",
+     " fire"
+    ],
+    "problems": [],
+    "control": "applauded",
+    "target_rank": 15544,
+    "control_rank": 15545
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "It had big wings and a long tail, and it breathed fire. The knight was afraid of it. The",
+    "intermediate": "dragon",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " knight",
+     " fire",
+     " dragon",
+     " princess",
+     " king"
+    ],
+    "problems": [],
+    "control": "cookies",
+    "target_rank": 1802,
+    "control_rank": 1800
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "It lived in a web in the corner of the room, and it had eight legs. The",
+    "intermediate": "spider",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " room",
+     " web",
+     " spider",
+     " floor",
+     " legs"
+    ],
+    "problems": [],
+    "control": "arch",
+    "target_rank": 3402,
+    "control_rank": 3400
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "Dad cut the turkey and everyone sat at the long table. Grandma passed the potatoes and the room was full of family. The",
+    "intermediate": "dinner",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " kids",
+     " family",
+     " turkey",
+     " children",
+     " whole"
+    ],
+    "problems": [],
+    "control": "default",
+    "target_rank": 1420,
+    "control_rank": 1419
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "The man in the white coat looked in Lily's mouth and said, \"Say ah.\" Then he gave her some medicine. The",
+    "intermediate": "doctor",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " man",
+     " medicine",
+     " doctor",
+     " woman",
+     " words"
+    ],
+    "problems": [],
+    "control": "scored",
+    "target_rank": 1966,
+    "control_rank": 1965
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "After the storm the sun came out. High above the wet hills there was a curve of red, green and blue. The",
+    "intermediate": "rainbow",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " sun",
+     " sky",
+     " water",
+     " river",
+     " clouds"
+    ],
+    "problems": [],
+    "control": "immediately",
+    "target_rank": 3043,
+    "control_rank": 3042
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "Tom put on his warm coat and walked out to the barn. He checked the hay, and the cows were eating, and the hens were sleeping. Then he sat on a log and watched the green rows of corn grow under the sun. The",
+    "intermediate": "farm",
+    "answer": null,
+    "source": "subagent",
+    "model_top": [
+     " sun",
+     " corn",
+     " cows",
+     " wind",
+     " hay"
+    ],
+    "problems": [],
+    "control": "lunch",
+    "target_rank": 2685,
+    "control_rank": 2684
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "Tom put on his warm coat and his red hat. He sat by the pond and held his little rod, waiting for a fish to pull the line. The",
+    "intermediate": "fishing",
+    "answer": null,
+    "source": "subagent",
+    "model_top": [
+     " fish",
+     " little",
+     " line",
+     " water",
+     " rod"
+    ],
+    "problems": [],
+    "control": "turkey",
+    "target_rank": 4971,
+    "control_rank": 4970
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "She looked at the empty bed where Max used to sleep. She kept his old collar in a box and cried when she thought of him. The",
+    "intermediate": "dead",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " next",
+     " last",
+     " box",
+     " room",
+     " old"
+    ],
+    "problems": [],
+    "control": "ant",
+    "target_rank": 2092,
+    "control_rank": 2091
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "The men had a big ship and a map with an X on it. They wore eye patches and dug for a chest of gold. The",
+    "intermediate": "pirate",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " chest",
+     " map",
+     " men",
+     " women",
+     " gold"
+    ],
+    "problems": [],
+    "control": "individuals",
+    "target_rank": 5237,
+    "control_rank": 5236
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "They saw a lion, two tall giraffes and a sleeping bear in cages. Then they bought ice cream and fed the goats. The",
+    "intermediate": "zoo",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " lion",
+     " lions",
+     " goats",
+     " goat",
+     " bear"
+    ],
+    "problems": [],
+    "control": "kick",
+    "target_rank": 4544,
+    "control_rank": 4543
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "Dad worked hard all year and had saved up. They counted the coins in the jar and there was finally enough. The",
+    "intermediate": "money",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " kids",
+     " jar",
+     " family",
+     " father",
+     " little"
+    ],
+    "problems": [],
+    "control": "process",
+    "target_rank": 1341,
+    "control_rank": 1340
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "She tied her shoes and ran as fast as she could. The others were right behind her, but she crossed the line first and got a ribbon. The",
+    "intermediate": "race",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " others",
+     " other",
+     " ribbon",
+     " next",
+     " winner"
+    ],
+    "problems": [],
+    "control": "ation",
+    "target_rank": 1248,
+    "control_rank": 1247
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "Sara built a castle with her bucket and spade. The waves came in and washed it away. The",
+    "intermediate": "beach",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " next",
+     " bucket",
+     " river",
+     " cost",
+     " following"
+    ],
+    "problems": [],
+    "control": "leave",
+    "target_rank": 1314,
+    "control_rank": 1312
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "She put her foot on the pedal and held the bars. Dad let go, and she rolled down the road by herself. The",
+    "intermediate": "bike",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " road",
+     " correct",
+     " most",
+     " word",
+     " sentence"
+    ],
+    "problems": [],
+    "control": "column",
+    "target_rank": 2219,
+    "control_rank": 2218
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "The boy was lost and began to cry. He had no idea where his mom had gone, and all the people around him were strangers. The",
+    "intermediate": "scared",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " boy",
+     " police",
+     " girl",
+     " mother",
+     " little"
+    ],
+    "problems": [],
+    "control": "outside",
+    "target_rank": 294,
+    "control_rank": 295
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "Mom put the dough in the oven. Soon the whole house smelled sweet, and she put icing and a cherry on top. The",
+    "intermediate": "cake",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " cherry",
+     " next",
+     " family",
+     " whole",
+     " cake"
+    ],
+    "problems": [],
+    "control": "train",
+    "target_rank": 1339,
+    "control_rank": 1338
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The bird had a hurt wing. Lily put it in a box, fed it worms and was gentle, until one day it could fly away. The",
+    "intermediate": "care",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " bird",
+     " next",
+     " box",
+     " birds",
+     " little"
+    ],
+    "problems": [],
+    "control": "ate",
+    "target_rank": 1176,
+    "control_rank": 1179
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "They got a cart and went up and down the rows. They bought eggs, bread and milk and paid at the front. The",
+    "intermediate": "shop",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " man",
+     " children",
+     " woman",
+     " girl",
+     " cart"
+    ],
+    "problems": [],
+    "control": "brown",
+    "target_rank": 1816,
+    "control_rank": 1817
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "easy",
+    "prompt": "The teacher wrote on the board, and all the children sat at their desks and opened their books. The",
+    "intermediate": "school",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " teacher",
+     " children",
+     " first",
+     " students",
+     " class"
+    ],
+    "problems": [],
+    "control": "stop",
+    "target_rank": 893,
+    "control_rank": 892
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The little seed was in the ground for a long time. Each day it got a bit of water, and one day a green shoot came up. The",
+    "intermediate": "grow",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " seed",
+     " little",
+     " next",
+     " plant",
+     " green"
+    ],
+    "problems": [],
+    "control": "driver",
+    "target_rank": 1961,
+    "control_rank": 1962
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "The train went fast and the bags were packed. They were going far away for a week to see new places and rest. The",
+    "intermediate": "holiday",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " train",
+     " bags",
+     " passengers",
+     " trip",
+     " journey"
+    ],
+    "problems": [],
+    "control": "hang",
+    "target_rank": 5375,
+    "control_rank": 5374
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "They tied a long string to it and ran across the field until the wind lifted it up into the sky. The",
+    "intermediate": "kite",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " wind",
+     " string",
+     " long",
+     " sky",
+     " strings"
+    ],
+    "problems": [],
+    "control": "feature",
+    "target_rank": 2186,
+    "control_rank": 2185
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "A big truck came with a loud siren. The men held a long hose and put water on the burning house. The",
+    "intermediate": "fire",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " men",
+     " water",
+     " house",
+     " truck",
+     " big"
+    ],
+    "problems": [],
+    "control": "able",
+    "target_rank": 730,
+    "control_rank": 729
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The rooster crowed and the sun came up. Tim rubbed his eyes and got up to eat his toast and eggs. The",
+    "intermediate": "morning",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " sun",
+     " toast",
+     " eggs",
+     " ro",
+     " dog"
+    ],
+    "problems": [],
+    "control": "body",
+    "target_rank": 891,
+    "control_rank": 894
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "He had a long white beard and a red suit. He came down the chimney and left toys under the tree. The",
+    "intermediate": "Santa",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " children",
+     " tree",
+     " cat",
+     " little",
+     " boy"
+    ],
+    "problems": [],
+    "control": "Map",
+    "target_rank": 7465,
+    "control_rank": 7467
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The leaves turned orange and fell from the trees. The air was cool, and the children kicked the piles on their way to school. The",
+    "intermediate": "autumn",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " children",
+     " teacher",
+     " sun",
+     " air",
+     " wind"
+    ],
+    "problems": [],
+    "control": "constantly",
+    "target_rank": 14369,
+    "control_rank": 14368
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "The bees flew from flower to flower. Mom watered the roses and Tim pulled the weeds and dug a hole for the seeds. The",
+    "intermediate": "garden",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " bees",
+     " flowers",
+     " sun",
+     " roses",
+     " honey"
+    ],
+    "problems": [],
+    "control": "under",
+    "target_rank": 439,
+    "control_rank": 438
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The girl in the blue dress lost her glass shoe at midnight, and the prince looked for her all over the land. The",
+    "intermediate": "princess",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " prince",
+     " girl",
+     " princess",
+     " boy",
+     " king"
+    ],
+    "problems": [],
+    "control": "designed",
+    "target_rank": 2436,
+    "control_rank": 2435
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "She shared her toys and held the door for the old man. She always helped and never said a mean word. The",
+    "intermediate": "kind",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " old",
+     " man",
+     " answer",
+     " most",
+     " people"
+    ],
+    "problems": [],
+    "control": "album",
+    "target_rank": 575,
+    "control_rank": 574
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "He wanted the red bike that Sam had. Every time he saw it his face got hot and he felt bad inside. The",
+    "intermediate": "jealous",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " bike",
+     " red",
+     " next",
+     " boy",
+     " man"
+    ],
+    "problems": [],
+    "control": "goat",
+    "target_rank": 3671,
+    "control_rank": 3670
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "She waved a wand and said a strange word. The frog turned into a prince, and the pumpkin turned into a coach. The",
+    "intermediate": "magic",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " prince",
+     " coach",
+     " princess",
+     " witch",
+     " wizard"
+    ],
+    "problems": [],
+    "control": "collection",
+    "target_rank": 2174,
+    "control_rank": 2173
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "Everyone said he could not climb it. He fell two times, but he got up and tried again until he reached the top. The",
+    "intermediate": "brave",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " under",
+     " correct",
+     " most",
+     " word",
+     " story"
+    ],
+    "problems": [],
+    "control": "along",
+    "target_rank": 588,
+    "control_rank": 587
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "medium",
+    "prompt": "They laughed and played all day and told each other secrets. They had known each other since they were little and did everything together. The",
+    "intermediate": "friends",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " two",
+     " man",
+     " only",
+     " secret",
+     " children"
+    ],
+    "problems": [],
+    "control": "smiled",
+    "target_rank": 143,
+    "control_rank": 142
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "The flowers came up and the baby birds sang. The snow was gone, and it got warmer every day. The",
+    "intermediate": "spring",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " baby",
+     " birds",
+     " snow",
+     " little",
+     " trees"
+    ],
+    "problems": [],
+    "control": "request",
+    "target_rank": 3649,
+    "control_rank": 3648
+   },
+   {
+    "domain": "stories",
+    "type": "association",
+    "difficulty": "hard",
+    "prompt": "Her tummy hurt and she had a hot head. Mom told her to stay home from school and rest. The",
+    "intermediate": "sick",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " next",
+     " doctor",
+     " girl",
+     " teacher",
+     " little"
+    ],
+    "problems": [],
+    "control": "asleep",
+    "target_rank": 3328,
+    "control_rank": 3327
+   }
+  ]
+ },
+ "python": {
+  "val": [
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "def f(g, s):\n    q = [s]\n    while q:\n        v = q.pop(0)\n        q.extend(g[v])\n\ndef",
+    "intermediate": "graph",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " f",
+     " solve",
+     " solution",
+     " g"
+    ],
+    "problems": [],
+    "control": "revealed",
+    "target_rank": 3178,
+    "control_rank": 3177
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "cursor.execute(\"SELECT * FROM users\")\nrows = cursor.fetchall()\n\ndef",
+    "intermediate": "database",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " get",
+     " create",
+     " add",
+     " main",
+     " insert"
+    ],
+    "problems": [],
+    "control": "skin",
+    "target_rank": 3366,
+    "control_rank": 3367
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "def f(n):\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return True\n\ndef",
+    "intermediate": "prime",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " is",
+     " main",
+     " sum",
+     " solution",
+     " find"
+    ],
+    "problems": [],
+    "control": "ring",
+    "target_rank": 10782,
+    "control_rank": 10781
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "m = re.match(r\"\\d+\", s)\n\ndef",
+    "intermediate": "regex",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " is",
+     " solution",
+     " solve",
+     " main",
+     " find"
+    ],
+    "problems": [],
+    "control": "xor",
+    "target_rank": 11025,
+    "control_rank": 11026
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "def f(y):\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\n\ndef",
+    "intermediate": "leap",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " is",
+     " main",
+     " f",
+     " g",
+     " solution"
+    ],
+    "problems": [],
+    "control": "cheaper",
+    "target_rank": 27176,
+    "control_rank": 27175
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "def f(w, h):\n    return w * h\n\ndef",
+    "intermediate": "area",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " area",
+     " f",
+     " g",
+     " c"
+    ],
+    "problems": [],
+    "control": "nodded",
+    "target_rank": 743,
+    "control_rank": 742
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "x = (4 + 4) + 1  # x is ",
+    "intermediate": "8",
+    "answer": "9",
+    "source": "agent",
+    "model_top": [
+     "1",
+     "8",
+     "9",
+     "4",
+     "2"
+    ],
+    "answer_rank": 3,
+    "problems": [],
+    "control": "0",
+    "target_rank": 57,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "print(4 * 2 + 1)  # prints ",
+    "intermediate": "8",
+    "answer": "9",
+    "source": "agent",
+    "model_top": [
+     "9",
+     "1",
+     "8",
+     "7",
+     "2"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 57,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "print(2 * 4 - 1)  # prints ",
+    "intermediate": "8",
+    "answer": "7",
+    "source": "agent",
+    "model_top": [
+     "7",
+     "9",
+     "1",
+     "8",
+     "5"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 57,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "t = threading.Thread(target=work)\nt.start()\nt.join()\n\ndef",
+    "intermediate": "parallel",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " work",
+     " worker",
+     " print",
+     " run",
+     " read"
+    ],
+    "problems": [],
+    "control": "chicken",
+    "target_rank": 6551,
+    "control_rank": 6550
+   }
+  ],
+  "test": [
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "with open(path) as f:\n    data = f.read()\n\ndef",
+    "intermediate": "file",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " get",
+     " count",
+     " is",
+     " part",
+     " find"
+    ],
+    "problems": [],
+    "control": "toys",
+    "target_rank": 405,
+    "control_rank": 407
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "try:\n    x = int(s)\nexcept ValueError:\n    x = 0\n\ndef",
+    "intermediate": "exception",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " add",
+     " sum",
+     " is",
+     " f"
+    ],
+    "problems": [],
+    "control": "highest",
+    "target_rank": 2455,
+    "control_rank": 2454
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "lock.acquire()\ncount += 1\nlock.release()\n\ndef",
+    "intermediate": "thread",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " test",
+     " lock",
+     " print",
+     " main",
+     " foo"
+    ],
+    "problems": [],
+    "control": "studio",
+    "target_rank": 3094,
+    "control_rank": 3093
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "x = (3 + 3) + 1  # x is ",
+    "intermediate": "6",
+    "answer": "7",
+    "source": "agent",
+    "model_top": [
+     "7",
+     "6",
+     "8",
+     "3",
+     "1"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 58,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "if user.pw == given:\n    session.start()\n\ndef",
+    "intermediate": "password",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " login",
+     " check",
+     " get",
+     " user",
+     " main"
+    ],
+    "problems": [],
+    "control": "create",
+    "target_rank": 2710,
+    "control_rank": 2711
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "x = random.randint(1, 6)\n\ndef",
+    "intermediate": "dice",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " roll",
+     " dice",
+     " check",
+     " random",
+     " game"
+    ],
+    "problems": [],
+    "control": "engo",
+    "target_rank": 23249,
+    "control_rank": 23248
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "print(2 * 3 + 1)  # prints ",
+    "intermediate": "6",
+    "answer": "7",
+    "source": "agent",
+    "model_top": [
+     "7",
+     "5",
+     "8",
+     "1",
+     "2"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 58,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "def f(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\ndef",
+    "intermediate": "divisor",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " f",
+     " gcd",
+     " g",
+     " is"
+    ],
+    "problems": [],
+    "control": "overview",
+    "target_rank": 64726,
+    "control_rank": 59999
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "r = requests.get(url)\nprint(r.status_code)\n\ndef",
+    "intermediate": "http",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " get",
+     " main",
+     " check",
+     " test",
+     " download"
+    ],
+    "problems": [],
+    "control": "hidden",
+    "target_rank": 2461,
+    "control_rank": 2459
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "def f(a):\n    return sum(a) / len(a)\n\ndef",
+    "intermediate": "average",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " g",
+     " f",
+     " main",
+     " mean",
+     " b"
+    ],
+    "problems": [],
+    "control": "ets",
+    "target_rank": 2449,
+    "control_rank": 2447
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "def f(items):\n    line = []\n    for x in items:\n        line.append(x)\n    return line.pop(0)\n\ndef",
+    "intermediate": "queue",
+    "answer": null,
+    "source": "subagent",
+    "model_top": [
+     " main",
+     " f",
+     " get",
+     " g",
+     " test"
+    ],
+    "problems": [],
+    "control": "boxes",
+    "target_rank": 5213,
+    "control_rank": 5212
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "for i in range(3):\n    for j in range(3):\n        c[i][j] = a[i][j] * b[i][j]\n\ndef",
+    "intermediate": "matrix",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " print",
+     " main",
+     " solve",
+     " a",
+     " display"
+    ],
+    "problems": [],
+    "control": "inf",
+    "target_rank": 6447,
+    "control_rank": 6446
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "def f(n):\n    if n == 0:\n        return 1\n    return n * f(n - 1)\n\ndef",
+    "intermediate": "factorial",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " f",
+     " fib",
+     " g",
+     " fibonacci"
+    ],
+    "problems": [],
+    "control": "iez",
+    "target_rank": 54211,
+    "control_rank": 54210
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "def f(p, q):\n    return ((p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2) ** 0.5\n\ndef",
+    "intermediate": "distance",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " f",
+     " main",
+     " g",
+     " solve",
+     " get"
+    ],
+    "problems": [],
+    "control": "space",
+    "target_rank": 1615,
+    "control_rank": 1614
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "def f(fn):\n    def g(*args):\n        print(args)\n        return fn(*args)\n    return g\n\ndef",
+    "intermediate": "decorator",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " f",
+     " add",
+     " g",
+     " main",
+     " h"
+    ],
+    "problems": [],
+    "control": "github",
+    "target_rank": 9413,
+    "control_rank": 9408
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "x = (5 + 2) + 1  # x is ",
+    "intermediate": "7",
+    "answer": "8",
+    "source": "agent",
+    "model_top": [
+     "8",
+     "7",
+     "1",
+     "5",
+     "9"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 74,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "def f(c):\n    return c * 9 / 5 + 32\n\ndef",
+    "intermediate": "temperature",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " c",
+     " main",
+     " f",
+     " convert",
+     " t"
+    ],
+    "problems": [],
+    "control": "discover",
+    "target_rank": 4521,
+    "control_rank": 4520
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "for line in sys.stdin:\n    print(line.upper())\n\ndef",
+    "intermediate": "input",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " count",
+     " print",
+     " upper",
+     " is"
+    ],
+    "problems": [],
+    "control": "support",
+    "target_rank": 1031,
+    "control_rank": 1030
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "print(3 * 3 - 1)  # prints ",
+    "intermediate": "9",
+    "answer": "8",
+    "source": "agent",
+    "model_top": [
+     "8",
+     "6",
+     "1",
+     "9",
+     "7"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 39,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "print(\"bad value\")\nsys.exit(1)\n\ndef",
+    "intermediate": "error",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " add",
+     " main",
+     " f",
+     " is",
+     " foo"
+    ],
+    "problems": [],
+    "control": "gone",
+    "target_rank": 1158,
+    "control_rank": 1157
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "medium",
+    "prompt": "print(sum([2, 2]) + 1)  # prints ",
+    "intermediate": "4",
+    "answer": "5",
+    "source": "agent",
+    "model_top": [
+     "5",
+     "4",
+     "6",
+     "7",
+     "3"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 52,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "print(2 * 2 + 3)  # prints ",
+    "intermediate": "4",
+    "answer": "7",
+    "source": "agent",
+    "model_top": [
+     "8",
+     "7",
+     "1",
+     "9",
+     "4"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "1",
+    "target_rank": 52,
+    "control_rank": 15
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "app = Flask(__name__)\n\n@app.route('/')\ndef home():\n    return 'hi'\n\ndef",
+    "intermediate": "web",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " create",
+     " get",
+     " main",
+     " run",
+     " hello"
+    ],
+    "problems": [],
+    "control": "keys",
+    "target_rank": 3197,
+    "control_rank": 3196
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "medium",
+    "prompt": "print(len(\"abcd\") + 1)  # prints ",
+    "intermediate": "4",
+    "answer": "5",
+    "source": "agent",
+    "model_top": [
+     "5",
+     "6",
+     "4",
+     "1",
+     "7"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 52,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "def f(r):\n    return 3.14 * r * r\n\ndef",
+    "intermediate": "circle",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " area",
+     " main",
+     " c",
+     " pi",
+     " g"
+    ],
+    "problems": [],
+    "control": "schema",
+    "target_rank": 4731,
+    "control_rank": 4730
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "total = price * qty\ntotal += total * 0.08\n\ndef",
+    "intermediate": "tax",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " total",
+     " get",
+     " calculate",
+     " discount",
+     " main"
+    ],
+    "problems": [],
+    "control": "ales",
+    "target_rank": 7864,
+    "control_rank": 7863
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "s = s.strip().lower()\n\ndef",
+    "intermediate": "clean",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " is",
+     " check",
+     " find",
+     " main",
+     " count"
+    ],
+    "problems": [],
+    "control": "curious",
+    "target_rank": 778,
+    "control_rank": 777
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "x = (2 + 2) + 1  # x is ",
+    "intermediate": "4",
+    "answer": "5",
+    "source": "agent",
+    "model_top": [
+     "5",
+     "4",
+     "7",
+     "2",
+     "6"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 52,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "hard",
+    "prompt": "a = \"abc\"\nn = len(a)\nprint(n + 1)  # prints ",
+    "intermediate": "3",
+    "answer": "4",
+    "source": "agent",
+    "model_top": [
+     "4",
+     "1",
+     "3",
+     "2",
+     "5"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 42,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "def f(items):\n    seen = set()\n    out = []\n    for x in items:\n        if x not in seen:\n            seen.add(x)\n            out.append(x)\n    return out\n\ndef",
+    "intermediate": "duplicate",
+    "answer": null,
+    "source": "subagent",
+    "model_top": [
+     " main",
+     " f",
+     " test",
+     " g",
+     " part"
+    ],
+    "problems": [],
+    "control": "rocked",
+    "target_rank": 18155,
+    "control_rank": 18154
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "os.makedirs(p)\n\ndef",
+    "intermediate": "directory",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " get",
+     " main",
+     " create",
+     " test",
+     " save"
+    ],
+    "problems": [],
+    "control": "ata",
+    "target_rank": 1974,
+    "control_rank": 1972
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "model.train()\nloss = loss_fn(model(x), y)\nloss.backward()\noptimizer.step()\n\ndef",
+    "intermediate": "gradient",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " test",
+     " plot",
+     " predict",
+     " train",
+     " evaluate"
+    ],
+    "problems": [],
+    "control": "downloaded",
+    "target_rank": 18568,
+    "control_rank": 18569
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "def f(a):\n    return max(a) - min(a)\n\ndef",
+    "intermediate": "range",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " solution",
+     " f",
+     " find",
+     " g"
+    ],
+    "problems": [],
+    "control": "response",
+    "target_rank": 600,
+    "control_rank": 599
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "x = a.split(',')\n\ndef",
+    "intermediate": "string",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " get",
+     " find",
+     " main",
+     " split",
+     " check"
+    ],
+    "problems": [],
+    "control": "without",
+    "target_rank": 721,
+    "control_rank": 719
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "x, y = 0, 0\nx += dx\ny += dy\nscreen.blit(img, (x, y))\n\ndef",
+    "intermediate": "game",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " move",
+     " draw",
+     " check",
+     " update",
+     " main"
+    ],
+    "problems": [],
+    "control": "outside",
+    "target_rank": 296,
+    "control_rank": 295
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "class Dog(Animal):\n    def speak(self):\n        return super().speak()\n\ndef",
+    "intermediate": "inheritance",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " run",
+     " make",
+     " speak",
+     " test"
+    ],
+    "problems": [],
+    "control": "inned",
+    "target_rank": 16190,
+    "control_rank": 16189
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "print(f\"{name} is {age}\")\n\ndef",
+    "intermediate": "format",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " greet",
+     " say",
+     " add",
+     " print",
+     " my"
+    ],
+    "problems": [],
+    "control": "max",
+    "target_rank": 1494,
+    "control_rank": 1493
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "a = [x * 2 for x in a]\n\ndef",
+    "intermediate": "list",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " multiply",
+     " f",
+     " my",
+     " square",
+     " solution"
+    ],
+    "problems": [],
+    "control": "number",
+    "target_rank": 403,
+    "control_rank": 402
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "for i in range(n):\n    for j in range(n - 1):\n        if a[j] > a[j + 1]:\n            a[j], a[j + 1] = a[j + 1], a[j]\n\ndef",
+    "intermediate": "sort",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " quick",
+     " merge",
+     " print",
+     " find",
+     " bubble"
+    ],
+    "problems": [],
+    "control": "flag",
+    "target_rank": 2946,
+    "control_rank": 2947
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "def f(n):\n    if n < 2:\n        return n\n    return f(n - 1) + f(n - 2)\n\ndef",
+    "intermediate": "fibonacci",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " f",
+     " fib",
+     " fibonacci",
+     " g"
+    ],
+    "problems": [],
+    "control": "deps",
+    "target_rank": 30297,
+    "control_rank": 30294
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "hard",
+    "prompt": "def f(s):\n    return s == s[::-1]\n\ndef",
+    "intermediate": "palindrome",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " is",
+     " main",
+     " f",
+     " check",
+     " solution"
+    ],
+    "problems": [],
+    "control": "save",
+    "target_rank": 65774,
+    "control_rank": 59996
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "class S:\n    def __init__(self):\n        self.a = []\n    def push(self, x):\n        self.a.append(x)\n    def pop(self):\n        return self.a.pop()\n\ndef",
+    "intermediate": "stack",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " test",
+     " merge",
+     " sort",
+     " solution"
+    ],
+    "problems": [],
+    "control": "pressure",
+    "target_rank": 3247,
+    "control_rank": 3246
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "easy",
+    "prompt": "x = (1 + 2) + 1  # x is ",
+    "intermediate": "3",
+    "answer": "4",
+    "source": "agent",
+    "model_top": [
+     "4",
+     "6",
+     "1",
+     "5",
+     "2"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 42,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "medium",
+    "prompt": "print(len(\"abc\") * 2)  # prints ",
+    "intermediate": "3",
+    "answer": "6",
+    "source": "agent",
+    "model_top": [
+     "2",
+     "6",
+     "1",
+     "4",
+     "8"
+    ],
+    "answer_rank": 2,
+    "problems": [],
+    "control": "1",
+    "target_rank": 42,
+    "control_rank": 15
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "easy",
+    "prompt": "a, b = b, a\n\ndef",
+    "intermediate": "swap",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " solution",
+     " swap",
+     " solve",
+     " is",
+     " main"
+    ],
+    "problems": [],
+    "control": "very",
+    "target_rank": 21536,
+    "control_rank": 21535
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "medium",
+    "prompt": "x = len(\"ab\") + 3  # x is ",
+    "intermediate": "2",
+    "answer": "5",
+    "source": "agent",
+    "model_top": [
+     "4",
+     "3",
+     "5",
+     "2",
+     "6"
+    ],
+    "answer_rank": 3,
+    "problems": [],
+    "control": "1",
+    "target_rank": 20,
+    "control_rank": 15
+   },
+   {
+    "domain": "python",
+    "type": "evaluate",
+    "difficulty": "medium",
+    "prompt": "x = len(\"abc\") + 1  # x is ",
+    "intermediate": "3",
+    "answer": "4",
+    "source": "agent",
+    "model_top": [
+     "4",
+     "5",
+     "3",
+     "2",
+     "1"
+    ],
+    "answer_rank": 1,
+    "problems": [],
+    "control": "0",
+    "target_rank": 42,
+    "control_rank": 14
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "x = b\"abc\".decode(\"utf-8\")\n\ndef",
+    "intermediate": "encoding",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " decode",
+     " encode",
+     " test",
+     " main",
+     " get"
+    ],
+    "problems": [],
+    "control": "entry",
+    "target_rank": 3141,
+    "control_rank": 3140
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "def test_add():\n    assert add(1, 2) == 3\n\ndef",
+    "intermediate": "unit",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " test",
+     " add",
+     " main",
+     " subtract",
+     " get"
+    ],
+    "problems": [],
+    "control": "station",
+    "target_rank": 2364,
+    "control_rank": 2363
+   },
+   {
+    "domain": "python",
+    "type": "implied",
+    "difficulty": "medium",
+    "prompt": "def f(a, x):\n    lo, hi = 0, len(a) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if a[mid] < x:\n            lo = mid + 1\n        else:\n            hi = mid - 1\n    return lo\n\ndef",
+    "intermediate": "binary",
+    "answer": null,
+    "source": "agent",
+    "model_top": [
+     " main",
+     " binary",
+     " find",
+     " solve",
+     " search"
+    ],
+    "problems": [],
+    "control": "inner",
+    "target_rank": 5268,
+    "control_rank": 5267
+   }
+  ]
+ }
+}

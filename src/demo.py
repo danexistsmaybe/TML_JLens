@@ -9,7 +9,7 @@ Steps:
   1. Load Qwen2.5-0.5B (frozen).
   2. Pick fitting windows from the split manifest (default: 8 WikiText + 8 TinyStories).
   3. Compute each window's Jacobians (about 9 s per window on the first run; cached in
-     data/jacobians/ afterwards) and average them uniformly into a J-lens.
+     the Jacobian cache afterwards) and average them uniformly into a J-lens.
   4. Read the prompt's last position at every layer through the J-lens and through the
      logit lens (J = I), side by side.
 

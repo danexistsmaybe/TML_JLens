@@ -1,0 +1,368 @@
+{
+ "wiki": {
+  "logit lens": {
+   "pass": {
+    "pass@1": {
+     "target": 0.0,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.09090909090909091,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.09090909090909091,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 0.45454545454545453,
+     "control": 0.0
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.0,
+    "mean_logp_shift": 3.8656261596414776
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.0,
+    "mean_logp_shift": 7.769431680440903
+   }
+  },
+  "wiki (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.09090909090909091,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.2727272727272727,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.45454545454545453,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 1.0,
+     "control": 0.0
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.3333333333333333,
+    "mean_logp_shift": 9.693605403105417
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.25,
+    "mean_logp_shift": 14.153045488728417
+   }
+  },
+  "stories (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.0,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.18181818181818182,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.45454545454545453,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 1.0,
+     "control": 0.0
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.2222222222222222,
+    "mean_logp_shift": 8.929466760820812
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.16666666666666666,
+    "mean_logp_shift": 14.034857683711582
+   }
+  },
+  "python (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.0,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.18181818181818182,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.36363636363636365,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 0.9090909090909091,
+     "control": 0.0
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.4166666666666667,
+    "mean_logp_shift": 10.410437481270897
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.4444444444444444,
+    "mean_logp_shift": 16.27130577961604
+   }
+  }
+ },
+ "stories": {
+  "logit lens": {
+   "pass": {
+    "pass@1": {
+     "target": 0.0,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.3,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.3,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 0.4,
+     "control": 0.0
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.027777777777777776,
+    "mean_logp_shift": 1.896311081118054
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.1111111111111111,
+    "mean_logp_shift": 4.085595829619302
+   }
+  },
+  "wiki (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.2,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.4,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.5,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 0.5,
+     "control": 0.1
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.6666666666666666,
+    "mean_logp_shift": 6.38598378168212
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.6111111111111112,
+    "mean_logp_shift": 10.336718771192762
+   }
+  },
+  "stories (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.1,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.3,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.5,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 0.6,
+     "control": 0.0
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.6944444444444444,
+    "mean_logp_shift": 6.7038278977076216
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.6666666666666666,
+    "mean_logp_shift": 11.00416651699278
+   }
+  },
+  "python (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.2,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.4,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.4,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 0.6,
+     "control": 0.0
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.5,
+    "mean_logp_shift": 5.616689006487529
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.5277777777777778,
+    "mean_logp_shift": 9.5613421731525
+   }
+  }
+ },
+ "python": {
+  "logit lens": {
+   "pass": {
+    "pass@1": {
+     "target": 0.3,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.4,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.4,
+     "control": 0.0
+    },
+    "pass@50": {
+     "target": 0.5,
+     "control": 0.0
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.3055555555555556,
+    "mean_logp_shift": 8.330496152242025
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.3888888888888889,
+    "mean_logp_shift": 16.562472184499104
+   }
+  },
+  "wiki (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.4,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.5,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.5,
+     "control": 0.1
+    },
+    "pass@50": {
+     "target": 0.8,
+     "control": 0.3
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.5,
+    "mean_logp_shift": 11.439314391877916
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.4444444444444444,
+    "mean_logp_shift": 20.681928820080227
+   }
+  },
+  "stories (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.4,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.5,
+     "control": 0.0
+    },
+    "pass@10": {
+     "target": 0.6,
+     "control": 0.1
+    },
+    "pass@50": {
+     "target": 0.8,
+     "control": 0.3
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.4444444444444444,
+    "mean_logp_shift": 10.220601982540554
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.3333333333333333,
+    "mean_logp_shift": 19.28853738307953
+   }
+  },
+  "python (30 windows)": {
+   "pass": {
+    "pass@1": {
+     "target": 0.4,
+     "control": 0.0
+    },
+    "pass@5": {
+     "target": 0.5,
+     "control": 0.3
+    },
+    "pass@10": {
+     "target": 0.5,
+     "control": 0.3
+    },
+    "pass@50": {
+     "target": 0.7,
+     "control": 0.3
+    }
+   },
+   "swap_alpha_1": {
+    "trials": 36,
+    "success": 0.6944444444444444,
+    "mean_logp_shift": 14.281866629918417
+   },
+   "swap_alpha_2": {
+    "trials": 36,
+    "success": 0.5555555555555556,
+    "mean_logp_shift": 22.938403367996216
+   }
+  }
+ }
+}

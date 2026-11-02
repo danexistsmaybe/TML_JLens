@@ -1,0 +1,3851 @@
+{
+ "wiki": {
+  "val": [
+   {
+    "domain": "wiki",
+    "category": "countries",
+    "template": "Fact: The currency of {arg} is the",
+    "args": {
+     "Japan": " yen",
+     "Germany": " Euro",
+     "Mexico": " peso",
+     "Britain": " pound"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "Japan",
+      "answer": " yen",
+      "arg_token": 6323,
+      "answer_token": 57340,
+      "top": " yen",
+      "prob": 0.5559592843055725,
+      "problem": null
+     },
+     {
+      "arg": "Germany",
+      "answer": " Euro",
+      "arg_token": 9856,
+      "answer_token": 19461,
+      "top": " Euro",
+      "prob": 0.6001379489898682,
+      "problem": null
+     },
+     {
+      "arg": "Mexico",
+      "answer": " peso",
+      "arg_token": 12270,
+      "answer_token": 36935,
+      "top": " peso",
+      "prob": 0.444747656583786,
+      "problem": null
+     },
+     {
+      "arg": "Britain",
+      "answer": " pound",
+      "arg_token": 13224,
+      "answer_token": 30023,
+      "top": " pound",
+      "prob": 0.5761756300926208,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "Japan",
+     "Germany",
+     "Mexico",
+     "Britain"
+    ],
+    "trials": [
+     {
+      "source": "Japan",
+      "target": "Germany"
+     },
+     {
+      "source": "Japan",
+      "target": "Mexico"
+     },
+     {
+      "source": "Japan",
+      "target": "Britain"
+     },
+     {
+      "source": "Germany",
+      "target": "Japan"
+     },
+     {
+      "source": "Germany",
+      "target": "Mexico"
+     },
+     {
+      "source": "Germany",
+      "target": "Britain"
+     },
+     {
+      "source": "Mexico",
+      "target": "Japan"
+     },
+     {
+      "source": "Mexico",
+      "target": "Germany"
+     },
+     {
+      "source": "Mexico",
+      "target": "Britain"
+     },
+     {
+      "source": "Britain",
+      "target": "Japan"
+     },
+     {
+      "source": "Britain",
+      "target": "Germany"
+     },
+     {
+      "source": "Britain",
+      "target": "Mexico"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "time",
+    "template": "Fact: The day after {arg} is",
+    "args": {
+     "Monday": " Tuesday",
+     "Saturday": " Sunday",
+     "Friday": " Saturday",
+     "Wednesday": " Thursday"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "Monday",
+      "answer": " Tuesday",
+      "arg_token": 7014,
+      "answer_token": 7589,
+      "top": " Tuesday",
+      "prob": 0.4243513345718384,
+      "problem": null
+     },
+     {
+      "arg": "Saturday",
+      "answer": " Sunday",
+      "arg_token": 7728,
+      "answer_token": 7270,
+      "top": " Sunday",
+      "prob": 0.5661024451255798,
+      "problem": null
+     },
+     {
+      "arg": "Friday",
+      "answer": " Saturday",
+      "arg_token": 6602,
+      "answer_token": 7728,
+      "top": " Saturday",
+      "prob": 0.25763946771621704,
+      "problem": null
+     },
+     {
+      "arg": "Wednesday",
+      "answer": " Thursday",
+      "arg_token": 7920,
+      "answer_token": 7794,
+      "top": " Thursday",
+      "prob": 0.5278298854827881,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "Monday",
+     "Saturday",
+     "Friday",
+     "Wednesday"
+    ],
+    "trials": [
+     {
+      "source": "Monday",
+      "target": "Saturday"
+     },
+     {
+      "source": "Monday",
+      "target": "Friday"
+     },
+     {
+      "source": "Monday",
+      "target": "Wednesday"
+     },
+     {
+      "source": "Saturday",
+      "target": "Monday"
+     },
+     {
+      "source": "Saturday",
+      "target": "Friday"
+     },
+     {
+      "source": "Saturday",
+      "target": "Wednesday"
+     },
+     {
+      "source": "Friday",
+      "target": "Monday"
+     },
+     {
+      "source": "Friday",
+      "target": "Saturday"
+     },
+     {
+      "source": "Friday",
+      "target": "Wednesday"
+     },
+     {
+      "source": "Wednesday",
+      "target": "Monday"
+     },
+     {
+      "source": "Wednesday",
+      "target": "Saturday"
+     },
+     {
+      "source": "Wednesday",
+      "target": "Friday"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "words",
+    "template": "Fact: The opposite of {arg} is",
+    "args": {
+     "hot": " cold",
+     "big": " small",
+     "up": " down",
+     "good": " bad",
+     "left": " right"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "hot",
+      "answer": " cold",
+      "arg_token": 4017,
+      "answer_token": 9255,
+      "top": " cold",
+      "prob": 0.8951444625854492,
+      "problem": null
+     },
+     {
+      "arg": "big",
+      "answer": " small",
+      "arg_token": 2409,
+      "answer_token": 2613,
+      "top": " small",
+      "prob": 0.8233864307403564,
+      "problem": null
+     },
+     {
+      "arg": "up",
+      "answer": " down",
+      "arg_token": 705,
+      "answer_token": 1495,
+      "top": " down",
+      "prob": 0.9860767126083374,
+      "problem": null
+     },
+     {
+      "arg": "good",
+      "answer": " bad",
+      "arg_token": 1661,
+      "answer_token": 3873,
+      "top": " bad",
+      "prob": 0.804145872592926,
+      "problem": null
+     },
+     {
+      "arg": "left",
+      "answer": " right",
+      "arg_token": 2115,
+      "answer_token": 1290,
+      "top": " right",
+      "prob": 0.9278956055641174,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "hot",
+     "big",
+     "up",
+     "good"
+    ],
+    "trials": [
+     {
+      "source": "hot",
+      "target": "big"
+     },
+     {
+      "source": "hot",
+      "target": "up"
+     },
+     {
+      "source": "hot",
+      "target": "good"
+     },
+     {
+      "source": "big",
+      "target": "hot"
+     },
+     {
+      "source": "big",
+      "target": "up"
+     },
+     {
+      "source": "big",
+      "target": "good"
+     },
+     {
+      "source": "up",
+      "target": "hot"
+     },
+     {
+      "source": "up",
+      "target": "big"
+     },
+     {
+      "source": "up",
+      "target": "good"
+     },
+     {
+      "source": "good",
+      "target": "hot"
+     },
+     {
+      "source": "good",
+      "target": "big"
+     },
+     {
+      "source": "good",
+      "target": "up"
+     }
+    ]
+   }
+  ],
+  "test": [
+   {
+    "domain": "wiki",
+    "category": "countries",
+    "template": "He traveled to the capital of {arg}, the city of",
+    "args": {
+     "France": " Paris",
+     "Germany": " Berlin",
+     "Japan": " Tokyo",
+     "Spain": " Madrid",
+     "Italy": " Rome",
+     "Russia": " Moscow",
+     "China": " Beijing"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "France",
+      "answer": " Paris",
+      "arg_token": 9625,
+      "answer_token": 12095,
+      "top": " Paris",
+      "prob": 0.6372519731521606,
+      "problem": null
+     },
+     {
+      "arg": "Germany",
+      "answer": " Berlin",
+      "arg_token": 9856,
+      "answer_token": 19846,
+      "top": " Berlin",
+      "prob": 0.5250867009162903,
+      "problem": null
+     },
+     {
+      "arg": "Japan",
+      "answer": " Tokyo",
+      "arg_token": 6323,
+      "answer_token": 26194,
+      "top": " Tokyo",
+      "prob": 0.4215661883354187,
+      "problem": null
+     },
+     {
+      "arg": "Spain",
+      "answer": " Madrid",
+      "arg_token": 17689,
+      "answer_token": 24081,
+      "top": " Madrid",
+      "prob": 0.7465237379074097,
+      "problem": null
+     },
+     {
+      "arg": "Italy",
+      "answer": " Rome",
+      "arg_token": 15344,
+      "answer_token": 21718,
+      "top": " Rome",
+      "prob": 0.5306872725486755,
+      "problem": null
+     },
+     {
+      "arg": "Russia",
+      "answer": " Moscow",
+      "arg_token": 8359,
+      "answer_token": 22415,
+      "top": " St",
+      "prob": 0.27476179599761963,
+      "problem": "model says ' St'"
+     },
+     {
+      "arg": "China",
+      "answer": " Beijing",
+      "arg_token": 5616,
+      "answer_token": 26549,
+      "top": " Beijing",
+      "prob": 0.6266629099845886,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "France",
+     "Germany",
+     "Japan",
+     "Spain"
+    ],
+    "trials": [
+     {
+      "source": "France",
+      "target": "Germany"
+     },
+     {
+      "source": "France",
+      "target": "Japan"
+     },
+     {
+      "source": "France",
+      "target": "Spain"
+     },
+     {
+      "source": "Germany",
+      "target": "France"
+     },
+     {
+      "source": "Germany",
+      "target": "Japan"
+     },
+     {
+      "source": "Germany",
+      "target": "Spain"
+     },
+     {
+      "source": "Japan",
+      "target": "France"
+     },
+     {
+      "source": "Japan",
+      "target": "Germany"
+     },
+     {
+      "source": "Japan",
+      "target": "Spain"
+     },
+     {
+      "source": "Spain",
+      "target": "France"
+     },
+     {
+      "source": "Spain",
+      "target": "Germany"
+     },
+     {
+      "source": "Spain",
+      "target": "Japan"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "elements",
+    "template": "Fact: The chemical symbol for {arg} is",
+    "args": {
+     "gold": " Au",
+     "silver": " Ag",
+     "iron": " Fe",
+     "sodium": " Na",
+     "oxygen": " O"
+    },
+    "source": "subagent",
+    "results": [
+     {
+      "arg": "gold",
+      "answer": " Au",
+      "arg_token": 6623,
+      "answer_token": 32050,
+      "top": " Au",
+      "prob": 0.9381747841835022,
+      "problem": null
+     },
+     {
+      "arg": "silver",
+      "answer": " Ag",
+      "arg_token": 14961,
+      "answer_token": 4598,
+      "top": " Ag",
+      "prob": 0.9028137922286987,
+      "problem": null
+     },
+     {
+      "arg": "iron",
+      "answer": " Fe",
+      "arg_token": 11001,
+      "answer_token": 3841,
+      "top": " Fe",
+      "prob": 0.9580246210098267,
+      "problem": null
+     },
+     {
+      "arg": "sodium",
+      "answer": " Na",
+      "arg_token": 38595,
+      "answer_token": 12812,
+      "top": " Na",
+      "prob": 0.8933759331703186,
+      "problem": null
+     },
+     {
+      "arg": "oxygen",
+      "answer": " O",
+      "arg_token": 23552,
+      "answer_token": 506,
+      "top": " O",
+      "prob": 0.8519574999809265,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "gold",
+     "silver",
+     "iron",
+     "sodium"
+    ],
+    "trials": [
+     {
+      "source": "gold",
+      "target": "silver"
+     },
+     {
+      "source": "gold",
+      "target": "iron"
+     },
+     {
+      "source": "gold",
+      "target": "sodium"
+     },
+     {
+      "source": "silver",
+      "target": "gold"
+     },
+     {
+      "source": "silver",
+      "target": "iron"
+     },
+     {
+      "source": "silver",
+      "target": "sodium"
+     },
+     {
+      "source": "iron",
+      "target": "gold"
+     },
+     {
+      "source": "iron",
+      "target": "silver"
+     },
+     {
+      "source": "iron",
+      "target": "sodium"
+     },
+     {
+      "source": "sodium",
+      "target": "gold"
+     },
+     {
+      "source": "sodium",
+      "target": "silver"
+     },
+     {
+      "source": "sodium",
+      "target": "iron"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "cities",
+    "template": "Fact: People in the city of {arg} mostly speak",
+    "args": {
+     "Paris": " French",
+     "Tokyo": " Japanese",
+     "Berlin": " German",
+     "Madrid": " Spanish"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "Paris",
+      "answer": " French",
+      "arg_token": 12095,
+      "answer_token": 8585,
+      "top": " French",
+      "prob": 0.8624876737594604,
+      "problem": null
+     },
+     {
+      "arg": "Tokyo",
+      "answer": " Japanese",
+      "arg_token": 26194,
+      "answer_token": 10769,
+      "top": " Japanese",
+      "prob": 0.7919525504112244,
+      "problem": null
+     },
+     {
+      "arg": "Berlin",
+      "answer": " German",
+      "arg_token": 19846,
+      "answer_token": 5938,
+      "top": " German",
+      "prob": 0.8431016802787781,
+      "problem": null
+     },
+     {
+      "arg": "Madrid",
+      "answer": " Spanish",
+      "arg_token": 24081,
+      "answer_token": 15154,
+      "top": " Spanish",
+      "prob": 0.8953058123588562,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "Paris",
+     "Tokyo",
+     "Berlin",
+     "Madrid"
+    ],
+    "trials": [
+     {
+      "source": "Paris",
+      "target": "Tokyo"
+     },
+     {
+      "source": "Paris",
+      "target": "Berlin"
+     },
+     {
+      "source": "Paris",
+      "target": "Madrid"
+     },
+     {
+      "source": "Tokyo",
+      "target": "Paris"
+     },
+     {
+      "source": "Tokyo",
+      "target": "Berlin"
+     },
+     {
+      "source": "Tokyo",
+      "target": "Madrid"
+     },
+     {
+      "source": "Berlin",
+      "target": "Paris"
+     },
+     {
+      "source": "Berlin",
+      "target": "Tokyo"
+     },
+     {
+      "source": "Berlin",
+      "target": "Madrid"
+     },
+     {
+      "source": "Madrid",
+      "target": "Paris"
+     },
+     {
+      "source": "Madrid",
+      "target": "Tokyo"
+     },
+     {
+      "source": "Madrid",
+      "target": "Berlin"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "countries",
+    "template": "Fact: The capital of {arg} is",
+    "args": {
+     "France": " Paris",
+     "Germany": " Berlin",
+     "Japan": " Tokyo",
+     "Spain": " Madrid",
+     "Italy": " Rome",
+     "Russia": " Moscow",
+     "China": " Beijing"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "France",
+      "answer": " Paris",
+      "arg_token": 9625,
+      "answer_token": 12095,
+      "top": " Paris",
+      "prob": 0.8417590856552124,
+      "problem": null
+     },
+     {
+      "arg": "Germany",
+      "answer": " Berlin",
+      "arg_token": 9856,
+      "answer_token": 19846,
+      "top": " Berlin",
+      "prob": 0.8535577058792114,
+      "problem": null
+     },
+     {
+      "arg": "Japan",
+      "answer": " Tokyo",
+      "arg_token": 6323,
+      "answer_token": 26194,
+      "top": " Tokyo",
+      "prob": 0.5789049863815308,
+      "problem": null
+     },
+     {
+      "arg": "Spain",
+      "answer": " Madrid",
+      "arg_token": 17689,
+      "answer_token": 24081,
+      "top": " Madrid",
+      "prob": 0.9048588275909424,
+      "problem": null
+     },
+     {
+      "arg": "Italy",
+      "answer": " Rome",
+      "arg_token": 15344,
+      "answer_token": 21718,
+      "top": " Rome",
+      "prob": 0.8110179901123047,
+      "problem": null
+     },
+     {
+      "arg": "Russia",
+      "answer": " Moscow",
+      "arg_token": 8359,
+      "answer_token": 22415,
+      "top": " Moscow",
+      "prob": 0.45087292790412903,
+      "problem": null
+     },
+     {
+      "arg": "China",
+      "answer": " Beijing",
+      "arg_token": 5616,
+      "answer_token": 26549,
+      "top": " Beijing",
+      "prob": 0.8010610342025757,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "France",
+     "Germany",
+     "Japan",
+     "Spain"
+    ],
+    "trials": [
+     {
+      "source": "France",
+      "target": "Germany"
+     },
+     {
+      "source": "France",
+      "target": "Japan"
+     },
+     {
+      "source": "France",
+      "target": "Spain"
+     },
+     {
+      "source": "Germany",
+      "target": "France"
+     },
+     {
+      "source": "Germany",
+      "target": "Japan"
+     },
+     {
+      "source": "Germany",
+      "target": "Spain"
+     },
+     {
+      "source": "Japan",
+      "target": "France"
+     },
+     {
+      "source": "Japan",
+      "target": "Germany"
+     },
+     {
+      "source": "Japan",
+      "target": "Spain"
+     },
+     {
+      "source": "Spain",
+      "target": "France"
+     },
+     {
+      "source": "Spain",
+      "target": "Germany"
+     },
+     {
+      "source": "Spain",
+      "target": "Japan"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "time",
+    "template": "Fact: The month after {arg} is",
+    "args": {
+     "March": " April",
+     "January": " February",
+     "April": " May",
+     "June": " July"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "March",
+      "answer": " April",
+      "arg_token": 5470,
+      "answer_token": 5813,
+      "top": " April",
+      "prob": 0.6073834896087646,
+      "problem": null
+     },
+     {
+      "arg": "January",
+      "answer": " February",
+      "arg_token": 6058,
+      "answer_token": 7400,
+      "top": " February",
+      "prob": 0.5606586337089539,
+      "problem": null
+     },
+     {
+      "arg": "April",
+      "answer": " May",
+      "arg_token": 5813,
+      "answer_token": 3217,
+      "top": " May",
+      "prob": 0.4062815308570862,
+      "problem": null
+     },
+     {
+      "arg": "June",
+      "answer": " July",
+      "arg_token": 5534,
+      "answer_token": 5768,
+      "top": " July",
+      "prob": 0.2625267505645752,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "March",
+     "January",
+     "April",
+     "June"
+    ],
+    "trials": [
+     {
+      "source": "March",
+      "target": "January"
+     },
+     {
+      "source": "March",
+      "target": "April"
+     },
+     {
+      "source": "March",
+      "target": "June"
+     },
+     {
+      "source": "January",
+      "target": "March"
+     },
+     {
+      "source": "January",
+      "target": "April"
+     },
+     {
+      "source": "January",
+      "target": "June"
+     },
+     {
+      "source": "April",
+      "target": "March"
+     },
+     {
+      "source": "April",
+      "target": "January"
+     },
+     {
+      "source": "April",
+      "target": "June"
+     },
+     {
+      "source": "June",
+      "target": "March"
+     },
+     {
+      "source": "June",
+      "target": "January"
+     },
+     {
+      "source": "June",
+      "target": "April"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "numbers",
+    "template": "Fact: The number after {arg} is",
+    "args": {
+     "two": " three",
+     "three": " four",
+     "four": " five",
+     "five": " six",
+     "six": " seven"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "two",
+      "answer": " three",
+      "arg_token": 1378,
+      "answer_token": 2326,
+      "top": " three",
+      "prob": 0.3985242247581482,
+      "problem": null
+     },
+     {
+      "arg": "three",
+      "answer": " four",
+      "arg_token": 2326,
+      "answer_token": 3040,
+      "top": " four",
+      "prob": 0.5612318515777588,
+      "problem": null
+     },
+     {
+      "arg": "four",
+      "answer": " five",
+      "arg_token": 3040,
+      "answer_token": 4236,
+      "top": " five",
+      "prob": 0.5220446586608887,
+      "problem": null
+     },
+     {
+      "arg": "five",
+      "answer": " six",
+      "arg_token": 4236,
+      "answer_token": 4743,
+      "top": " six",
+      "prob": 0.4976995289325714,
+      "problem": null
+     },
+     {
+      "arg": "six",
+      "answer": " seven",
+      "arg_token": 4743,
+      "answer_token": 8094,
+      "top": " seven",
+      "prob": 0.7680789232254028,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "two",
+     "three",
+     "four",
+     "five"
+    ],
+    "trials": [
+     {
+      "source": "two",
+      "target": "three"
+     },
+     {
+      "source": "two",
+      "target": "four"
+     },
+     {
+      "source": "two",
+      "target": "five"
+     },
+     {
+      "source": "three",
+      "target": "two"
+     },
+     {
+      "source": "three",
+      "target": "four"
+     },
+     {
+      "source": "three",
+      "target": "five"
+     },
+     {
+      "source": "four",
+      "target": "two"
+     },
+     {
+      "source": "four",
+      "target": "three"
+     },
+     {
+      "source": "four",
+      "target": "five"
+     },
+     {
+      "source": "five",
+      "target": "two"
+     },
+     {
+      "source": "five",
+      "target": "three"
+     },
+     {
+      "source": "five",
+      "target": "four"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "countries",
+    "template": "Fact: People in {arg} speak",
+    "args": {
+     "France": " French",
+     "Germany": " German",
+     "Japan": " Japanese",
+     "Spain": " Spanish",
+     "Italy": " Italian",
+     "Russia": " Russian",
+     "China": " Chinese"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "France",
+      "answer": " French",
+      "arg_token": 9625,
+      "answer_token": 8585,
+      "top": " French",
+      "prob": 0.7640267014503479,
+      "problem": null
+     },
+     {
+      "arg": "Germany",
+      "answer": " German",
+      "arg_token": 9856,
+      "answer_token": 5938,
+      "top": " German",
+      "prob": 0.5706214904785156,
+      "problem": null
+     },
+     {
+      "arg": "Japan",
+      "answer": " Japanese",
+      "arg_token": 6323,
+      "answer_token": 10769,
+      "top": " Japanese",
+      "prob": 0.3577292263507843,
+      "problem": null
+     },
+     {
+      "arg": "Spain",
+      "answer": " Spanish",
+      "arg_token": 17689,
+      "answer_token": 15154,
+      "top": " Spanish",
+      "prob": 0.6623070240020752,
+      "problem": null
+     },
+     {
+      "arg": "Italy",
+      "answer": " Italian",
+      "arg_token": 15344,
+      "answer_token": 14811,
+      "top": " Italian",
+      "prob": 0.5768203735351562,
+      "problem": null
+     },
+     {
+      "arg": "Russia",
+      "answer": " Russian",
+      "arg_token": 8359,
+      "answer_token": 8522,
+      "top": " Russian",
+      "prob": 0.46701592206954956,
+      "problem": null
+     },
+     {
+      "arg": "China",
+      "answer": " Chinese",
+      "arg_token": 5616,
+      "answer_token": 8453,
+      "top": " Chinese",
+      "prob": 0.4241773784160614,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "France",
+     "Germany",
+     "Japan",
+     "Spain"
+    ],
+    "trials": [
+     {
+      "source": "France",
+      "target": "Germany"
+     },
+     {
+      "source": "France",
+      "target": "Japan"
+     },
+     {
+      "source": "France",
+      "target": "Spain"
+     },
+     {
+      "source": "Germany",
+      "target": "France"
+     },
+     {
+      "source": "Germany",
+      "target": "Japan"
+     },
+     {
+      "source": "Germany",
+      "target": "Spain"
+     },
+     {
+      "source": "Japan",
+      "target": "France"
+     },
+     {
+      "source": "Japan",
+      "target": "Germany"
+     },
+     {
+      "source": "Japan",
+      "target": "Spain"
+     },
+     {
+      "source": "Spain",
+      "target": "France"
+     },
+     {
+      "source": "Spain",
+      "target": "Germany"
+     },
+     {
+      "source": "Spain",
+      "target": "Japan"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "cities",
+    "template": "Fact: The city of {arg} is in",
+    "args": {
+     "Paris": " France",
+     "Berlin": " Germany",
+     "Tokyo": " Japan",
+     "Madrid": " Spain",
+     "Rome": " Italy",
+     "Moscow": " Russia"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "Paris",
+      "answer": " France",
+      "arg_token": 12095,
+      "answer_token": 9625,
+      "top": " France",
+      "prob": 0.6645194888114929,
+      "problem": null
+     },
+     {
+      "arg": "Berlin",
+      "answer": " Germany",
+      "arg_token": 19846,
+      "answer_token": 9856,
+      "top": " Germany",
+      "prob": 0.41350021958351135,
+      "problem": null
+     },
+     {
+      "arg": "Tokyo",
+      "answer": " Japan",
+      "arg_token": 26194,
+      "answer_token": 6323,
+      "top": " Japan",
+      "prob": 0.4762834906578064,
+      "problem": null
+     },
+     {
+      "arg": "Madrid",
+      "answer": " Spain",
+      "arg_token": 24081,
+      "answer_token": 17689,
+      "top": " Spain",
+      "prob": 0.6632699370384216,
+      "problem": null
+     },
+     {
+      "arg": "Rome",
+      "answer": " Italy",
+      "arg_token": 21718,
+      "answer_token": 15344,
+      "top": " Italy",
+      "prob": 0.5540646314620972,
+      "problem": null
+     },
+     {
+      "arg": "Moscow",
+      "answer": " Russia",
+      "arg_token": 22415,
+      "answer_token": 8359,
+      "top": " Russia",
+      "prob": 0.4107360541820526,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "Paris",
+     "Berlin",
+     "Tokyo",
+     "Madrid"
+    ],
+    "trials": [
+     {
+      "source": "Paris",
+      "target": "Berlin"
+     },
+     {
+      "source": "Paris",
+      "target": "Tokyo"
+     },
+     {
+      "source": "Paris",
+      "target": "Madrid"
+     },
+     {
+      "source": "Berlin",
+      "target": "Paris"
+     },
+     {
+      "source": "Berlin",
+      "target": "Tokyo"
+     },
+     {
+      "source": "Berlin",
+      "target": "Madrid"
+     },
+     {
+      "source": "Tokyo",
+      "target": "Paris"
+     },
+     {
+      "source": "Tokyo",
+      "target": "Berlin"
+     },
+     {
+      "source": "Tokyo",
+      "target": "Madrid"
+     },
+     {
+      "source": "Madrid",
+      "target": "Paris"
+     },
+     {
+      "source": "Madrid",
+      "target": "Berlin"
+     },
+     {
+      "source": "Madrid",
+      "target": "Tokyo"
+     }
+    ]
+   },
+   {
+    "domain": "wiki",
+    "category": "countries",
+    "template": "Fact: {arg} is a country in",
+    "args": {
+     "France": " Europe",
+     "Japan": " Asia",
+     "Egypt": " Africa",
+     "Brazil": " South"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "France",
+      "answer": " Europe",
+      "arg_token": 9625,
+      "answer_token": 4505,
+      "top": " Europe",
+      "prob": 0.5472153425216675,
+      "problem": null
+     },
+     {
+      "arg": "Japan",
+      "answer": " Asia",
+      "arg_token": 6323,
+      "answer_token": 13622,
+      "top": " Asia",
+      "prob": 0.4183056652545929,
+      "problem": null
+     },
+     {
+      "arg": "Egypt",
+      "answer": " Africa",
+      "arg_token": 14867,
+      "answer_token": 10174,
+      "top": " Africa",
+      "prob": 0.4761340618133545,
+      "problem": null
+     },
+     {
+      "arg": "Brazil",
+      "answer": " South",
+      "arg_token": 15948,
+      "answer_token": 4882,
+      "top": " South",
+      "prob": 0.7987577319145203,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "France",
+     "Japan",
+     "Egypt",
+     "Brazil"
+    ],
+    "trials": [
+     {
+      "source": "France",
+      "target": "Japan"
+     },
+     {
+      "source": "France",
+      "target": "Egypt"
+     },
+     {
+      "source": "France",
+      "target": "Brazil"
+     },
+     {
+      "source": "Japan",
+      "target": "France"
+     },
+     {
+      "source": "Japan",
+      "target": "Egypt"
+     },
+     {
+      "source": "Japan",
+      "target": "Brazil"
+     },
+     {
+      "source": "Egypt",
+      "target": "France"
+     },
+     {
+      "source": "Egypt",
+      "target": "Japan"
+     },
+     {
+      "source": "Egypt",
+      "target": "Brazil"
+     },
+     {
+      "source": "Brazil",
+      "target": "France"
+     },
+     {
+      "source": "Brazil",
+      "target": "Japan"
+     },
+     {
+      "source": "Brazil",
+      "target": "Egypt"
+     }
+    ]
+   }
+  ]
+ },
+ "stories": {
+  "val": [
+   {
+    "domain": "stories",
+    "category": "things",
+    "template": "Lily touched the {arg}. It was very",
+    "args": {
+     "ice": " cold",
+     "fire": " hot",
+     "pillow": " soft",
+     "rock": " hard"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "ice",
+      "answer": " cold",
+      "arg_token": 9853,
+      "answer_token": 9255,
+      "top": " cold",
+      "prob": 0.6641150116920471,
+      "problem": null
+     },
+     {
+      "arg": "fire",
+      "answer": " hot",
+      "arg_token": 3940,
+      "answer_token": 4017,
+      "top": " hot",
+      "prob": 0.6246890425682068,
+      "problem": null
+     },
+     {
+      "arg": "pillow",
+      "answer": " soft",
+      "arg_token": 42325,
+      "answer_token": 8413,
+      "top": " soft",
+      "prob": 0.2735801339149475,
+      "problem": null
+     },
+     {
+      "arg": "rock",
+      "answer": " hard",
+      "arg_token": 6946,
+      "answer_token": 2588,
+      "top": " hard",
+      "prob": 0.3234667479991913,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "ice",
+     "fire",
+     "pillow",
+     "rock"
+    ],
+    "trials": [
+     {
+      "source": "ice",
+      "target": "fire"
+     },
+     {
+      "source": "ice",
+      "target": "pillow"
+     },
+     {
+      "source": "ice",
+      "target": "rock"
+     },
+     {
+      "source": "fire",
+      "target": "ice"
+     },
+     {
+      "source": "fire",
+      "target": "pillow"
+     },
+     {
+      "source": "fire",
+      "target": "rock"
+     },
+     {
+      "source": "pillow",
+      "target": "ice"
+     },
+     {
+      "source": "pillow",
+      "target": "fire"
+     },
+     {
+      "source": "pillow",
+      "target": "rock"
+     },
+     {
+      "source": "rock",
+      "target": "ice"
+     },
+     {
+      "source": "rock",
+      "target": "fire"
+     },
+     {
+      "source": "rock",
+      "target": "pillow"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "objects",
+    "template": "She got a {arg}, so she started to",
+    "args": {
+     "book": " read",
+     "ball": " play",
+     "bike": " ride",
+     "kite": " fly"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "book",
+      "answer": " read",
+      "arg_token": 2311,
+      "answer_token": 1349,
+      "top": " read",
+      "prob": 0.6071051955223083,
+      "problem": null
+     },
+     {
+      "arg": "ball",
+      "answer": " play",
+      "arg_token": 4935,
+      "answer_token": 1486,
+      "top": " play",
+      "prob": 0.429999977350235,
+      "problem": null
+     },
+     {
+      "arg": "bike",
+      "answer": " ride",
+      "arg_token": 12963,
+      "answer_token": 11877,
+      "top": " ride",
+      "prob": 0.4646051228046417,
+      "problem": null
+     },
+     {
+      "arg": "kite",
+      "answer": " fly",
+      "arg_token": 98119,
+      "answer_token": 11466,
+      "top": " fly",
+      "prob": 0.13978362083435059,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "book",
+     "ball",
+     "bike",
+     "kite"
+    ],
+    "trials": [
+     {
+      "source": "book",
+      "target": "ball"
+     },
+     {
+      "source": "book",
+      "target": "bike"
+     },
+     {
+      "source": "book",
+      "target": "kite"
+     },
+     {
+      "source": "ball",
+      "target": "book"
+     },
+     {
+      "source": "ball",
+      "target": "bike"
+     },
+     {
+      "source": "ball",
+      "target": "kite"
+     },
+     {
+      "source": "bike",
+      "target": "book"
+     },
+     {
+      "source": "bike",
+      "target": "ball"
+     },
+     {
+      "source": "bike",
+      "target": "kite"
+     },
+     {
+      "source": "kite",
+      "target": "book"
+     },
+     {
+      "source": "kite",
+      "target": "ball"
+     },
+     {
+      "source": "kite",
+      "target": "bike"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "feelings",
+    "template": "Tom was very {arg}. He began to",
+    "args": {
+     "sad": " cry",
+     "hungry": " eat",
+     "thirsty": " drink",
+     "tired": " sleep"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "sad",
+      "answer": " cry",
+      "arg_token": 12421,
+      "answer_token": 15729,
+      "top": " cry",
+      "prob": 0.4326114356517792,
+      "problem": null
+     },
+     {
+      "arg": "hungry",
+      "answer": " eat",
+      "arg_token": 28956,
+      "answer_token": 8180,
+      "top": " eat",
+      "prob": 0.356447696685791,
+      "problem": null
+     },
+     {
+      "arg": "thirsty",
+      "answer": " drink",
+      "arg_token": 97108,
+      "answer_token": 7027,
+      "top": " drink",
+      "prob": 0.2303171306848526,
+      "problem": null
+     },
+     {
+      "arg": "tired",
+      "answer": " sleep",
+      "arg_token": 19227,
+      "answer_token": 6084,
+      "top": " sleep",
+      "prob": 0.14160218834877014,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "sad",
+     "hungry",
+     "thirsty",
+     "tired"
+    ],
+    "trials": [
+     {
+      "source": "sad",
+      "target": "hungry"
+     },
+     {
+      "source": "sad",
+      "target": "thirsty"
+     },
+     {
+      "source": "sad",
+      "target": "tired"
+     },
+     {
+      "source": "hungry",
+      "target": "sad"
+     },
+     {
+      "source": "hungry",
+      "target": "thirsty"
+     },
+     {
+      "source": "hungry",
+      "target": "tired"
+     },
+     {
+      "source": "thirsty",
+      "target": "sad"
+     },
+     {
+      "source": "thirsty",
+      "target": "hungry"
+     },
+     {
+      "source": "thirsty",
+      "target": "tired"
+     },
+     {
+      "source": "tired",
+      "target": "sad"
+     },
+     {
+      "source": "tired",
+      "target": "hungry"
+     },
+     {
+      "source": "tired",
+      "target": "thirsty"
+     }
+    ]
+   }
+  ],
+  "test": [
+   {
+    "domain": "stories",
+    "category": "feelings",
+    "template": "Lily felt very {arg}. She began to",
+    "args": {
+     "sad": " cry",
+     "hungry": " eat",
+     "thirsty": " drink",
+     "tired": " sleep"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "sad",
+      "answer": " cry",
+      "arg_token": 12421,
+      "answer_token": 15729,
+      "top": " cry",
+      "prob": 0.6444652080535889,
+      "problem": null
+     },
+     {
+      "arg": "hungry",
+      "answer": " eat",
+      "arg_token": 28956,
+      "answer_token": 8180,
+      "top": " eat",
+      "prob": 0.3618072271347046,
+      "problem": null
+     },
+     {
+      "arg": "thirsty",
+      "answer": " drink",
+      "arg_token": 97108,
+      "answer_token": 7027,
+      "top": " drink",
+      "prob": 0.2398083209991455,
+      "problem": null
+     },
+     {
+      "arg": "tired",
+      "answer": " sleep",
+      "arg_token": 19227,
+      "answer_token": 6084,
+      "top": " feel",
+      "prob": 0.06725604087114334,
+      "problem": "model says ' feel'"
+     }
+    ],
+    "kept": [
+     "sad",
+     "hungry",
+     "thirsty"
+    ],
+    "trials": [
+     {
+      "source": "sad",
+      "target": "hungry"
+     },
+     {
+      "source": "sad",
+      "target": "thirsty"
+     },
+     {
+      "source": "hungry",
+      "target": "sad"
+     },
+     {
+      "source": "hungry",
+      "target": "thirsty"
+     },
+     {
+      "source": "thirsty",
+      "target": "sad"
+     },
+     {
+      "source": "thirsty",
+      "target": "hungry"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "things",
+    "template": "Sam touched the {arg}. It felt very",
+    "args": {
+     "ice": " cold",
+     "fire": " hot",
+     "pillow": " soft",
+     "rock": " hard"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "ice",
+      "answer": " cold",
+      "arg_token": 9853,
+      "answer_token": 9255,
+      "top": " cold",
+      "prob": 0.46607881784439087,
+      "problem": null
+     },
+     {
+      "arg": "fire",
+      "answer": " hot",
+      "arg_token": 3940,
+      "answer_token": 4017,
+      "top": " hot",
+      "prob": 0.648995578289032,
+      "problem": null
+     },
+     {
+      "arg": "pillow",
+      "answer": " soft",
+      "arg_token": 42325,
+      "answer_token": 8413,
+      "top": " soft",
+      "prob": 0.22589896619319916,
+      "problem": null
+     },
+     {
+      "arg": "rock",
+      "answer": " hard",
+      "arg_token": 6946,
+      "answer_token": 2588,
+      "top": " soft",
+      "prob": 0.23789961636066437,
+      "problem": "model says ' soft'"
+     }
+    ],
+    "kept": [
+     "ice",
+     "fire",
+     "pillow"
+    ],
+    "trials": [
+     {
+      "source": "ice",
+      "target": "fire"
+     },
+     {
+      "source": "ice",
+      "target": "pillow"
+     },
+     {
+      "source": "fire",
+      "target": "ice"
+     },
+     {
+      "source": "fire",
+      "target": "pillow"
+     },
+     {
+      "source": "pillow",
+      "target": "ice"
+     },
+     {
+      "source": "pillow",
+      "target": "fire"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "feelings",
+    "template": "The boy was very {arg}. He began to",
+    "args": {
+     "sad": " cry",
+     "hungry": " eat",
+     "thirsty": " drink",
+     "tired": " sleep"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "sad",
+      "answer": " cry",
+      "arg_token": 12421,
+      "answer_token": 15729,
+      "top": " cry",
+      "prob": 0.6202434301376343,
+      "problem": null
+     },
+     {
+      "arg": "hungry",
+      "answer": " eat",
+      "arg_token": 28956,
+      "answer_token": 8180,
+      "top": " eat",
+      "prob": 0.40279078483581543,
+      "problem": null
+     },
+     {
+      "arg": "thirsty",
+      "answer": " drink",
+      "arg_token": 97108,
+      "answer_token": 7027,
+      "top": " drink",
+      "prob": 0.18327005207538605,
+      "problem": null
+     },
+     {
+      "arg": "tired",
+      "answer": " sleep",
+      "arg_token": 19227,
+      "answer_token": 6084,
+      "top": " ______",
+      "prob": 0.09319287538528442,
+      "problem": "model says ' ______'"
+     }
+    ],
+    "kept": [
+     "sad",
+     "hungry",
+     "thirsty"
+    ],
+    "trials": [
+     {
+      "source": "sad",
+      "target": "hungry"
+     },
+     {
+      "source": "sad",
+      "target": "thirsty"
+     },
+     {
+      "source": "hungry",
+      "target": "sad"
+     },
+     {
+      "source": "hungry",
+      "target": "thirsty"
+     },
+     {
+      "source": "thirsty",
+      "target": "sad"
+     },
+     {
+      "source": "thirsty",
+      "target": "hungry"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "objects",
+    "template": "Harry went to the hill with a {arg}. He wanted to",
+    "args": {
+     "sled": " slide",
+     "kite": " fly",
+     "shovel": " dig",
+     "camera": " take"
+    },
+    "source": "subagent",
+    "results": [
+     {
+      "arg": "sled",
+      "answer": " slide",
+      "arg_token": 94412,
+      "answer_token": 14983,
+      "top": " make",
+      "prob": 0.006894297432154417,
+      "problem": "model says ' make'"
+     },
+     {
+      "arg": "kite",
+      "answer": " fly",
+      "arg_token": 98119,
+      "answer_token": 11466,
+      "top": " fly",
+      "prob": 0.5131791830062866,
+      "problem": null
+     },
+     {
+      "arg": "shovel",
+      "answer": " dig",
+      "arg_token": 91991,
+      "answer_token": 4078,
+      "top": " dig",
+      "prob": 0.25850778818130493,
+      "problem": null
+     },
+     {
+      "arg": "camera",
+      "answer": " take",
+      "arg_token": 6249,
+      "answer_token": 1896,
+      "top": " take",
+      "prob": 0.42619049549102783,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "kite",
+     "shovel",
+     "camera"
+    ],
+    "trials": [
+     {
+      "source": "kite",
+      "target": "shovel"
+     },
+     {
+      "source": "kite",
+      "target": "camera"
+     },
+     {
+      "source": "shovel",
+      "target": "kite"
+     },
+     {
+      "source": "shovel",
+      "target": "camera"
+     },
+     {
+      "source": "camera",
+      "target": "kite"
+     },
+     {
+      "source": "camera",
+      "target": "shovel"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "animals",
+    "template": "The little {arg} can",
+    "args": {
+     "dog": " run",
+     "bird": " fly",
+     "frog": " jump",
+     "fish": " swim"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "dog",
+      "answer": " run",
+      "arg_token": 5562,
+      "answer_token": 1598,
+      "top": " run",
+      "prob": 0.1356532871723175,
+      "problem": null
+     },
+     {
+      "arg": "bird",
+      "answer": " fly",
+      "arg_token": 11958,
+      "answer_token": 11466,
+      "top": " fly",
+      "prob": 0.3688068091869354,
+      "problem": null
+     },
+     {
+      "arg": "frog",
+      "answer": " jump",
+      "arg_token": 59881,
+      "answer_token": 7784,
+      "top": " jump",
+      "prob": 0.7779209017753601,
+      "problem": null
+     },
+     {
+      "arg": "fish",
+      "answer": " swim",
+      "arg_token": 7640,
+      "answer_token": 16191,
+      "top": " swim",
+      "prob": 0.21457546949386597,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "dog",
+     "bird",
+     "frog",
+     "fish"
+    ],
+    "trials": [
+     {
+      "source": "dog",
+      "target": "bird"
+     },
+     {
+      "source": "dog",
+      "target": "frog"
+     },
+     {
+      "source": "dog",
+      "target": "fish"
+     },
+     {
+      "source": "bird",
+      "target": "dog"
+     },
+     {
+      "source": "bird",
+      "target": "frog"
+     },
+     {
+      "source": "bird",
+      "target": "fish"
+     },
+     {
+      "source": "frog",
+      "target": "dog"
+     },
+     {
+      "source": "frog",
+      "target": "bird"
+     },
+     {
+      "source": "frog",
+      "target": "fish"
+     },
+     {
+      "source": "fish",
+      "target": "dog"
+     },
+     {
+      "source": "fish",
+      "target": "bird"
+     },
+     {
+      "source": "fish",
+      "target": "frog"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "feelings",
+    "template": "Mia was very {arg}. She began to",
+    "args": {
+     "sad": " cry",
+     "hungry": " eat",
+     "thirsty": " drink",
+     "tired": " sleep"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "sad",
+      "answer": " cry",
+      "arg_token": 12421,
+      "answer_token": 15729,
+      "top": " cry",
+      "prob": 0.5251931548118591,
+      "problem": null
+     },
+     {
+      "arg": "hungry",
+      "answer": " eat",
+      "arg_token": 28956,
+      "answer_token": 8180,
+      "top": " eat",
+      "prob": 0.32026922702789307,
+      "problem": null
+     },
+     {
+      "arg": "thirsty",
+      "answer": " drink",
+      "arg_token": 97108,
+      "answer_token": 7027,
+      "top": " drink",
+      "prob": 0.2921554148197174,
+      "problem": null
+     },
+     {
+      "arg": "tired",
+      "answer": " sleep",
+      "arg_token": 19227,
+      "answer_token": 6084,
+      "top": " feel",
+      "prob": 0.07520092278718948,
+      "problem": "model says ' feel'"
+     }
+    ],
+    "kept": [
+     "sad",
+     "hungry",
+     "thirsty"
+    ],
+    "trials": [
+     {
+      "source": "sad",
+      "target": "hungry"
+     },
+     {
+      "source": "sad",
+      "target": "thirsty"
+     },
+     {
+      "source": "hungry",
+      "target": "sad"
+     },
+     {
+      "source": "hungry",
+      "target": "thirsty"
+     },
+     {
+      "source": "thirsty",
+      "target": "sad"
+     },
+     {
+      "source": "thirsty",
+      "target": "hungry"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "objects",
+    "template": "Lily had a {arg}. She liked to",
+    "args": {
+     "kite": " fly",
+     "book": " read",
+     "bike": " ride",
+     "song": " sing",
+     "ball": " play"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "kite",
+      "answer": " fly",
+      "arg_token": 98119,
+      "answer_token": 11466,
+      "top": " fly",
+      "prob": 0.621903657913208,
+      "problem": null
+     },
+     {
+      "arg": "book",
+      "answer": " read",
+      "arg_token": 2311,
+      "answer_token": 1349,
+      "top": " read",
+      "prob": 0.8693695068359375,
+      "problem": null
+     },
+     {
+      "arg": "bike",
+      "answer": " ride",
+      "arg_token": 12963,
+      "answer_token": 11877,
+      "top": " ride",
+      "prob": 0.4479818046092987,
+      "problem": null
+     },
+     {
+      "arg": "song",
+      "answer": " sing",
+      "arg_token": 5492,
+      "answer_token": 7780,
+      "top": " sing",
+      "prob": 0.4040490984916687,
+      "problem": null
+     },
+     {
+      "arg": "ball",
+      "answer": " play",
+      "arg_token": 4935,
+      "answer_token": 1486,
+      "top": " play",
+      "prob": 0.4208856523036957,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "kite",
+     "book",
+     "bike",
+     "song"
+    ],
+    "trials": [
+     {
+      "source": "kite",
+      "target": "book"
+     },
+     {
+      "source": "kite",
+      "target": "bike"
+     },
+     {
+      "source": "kite",
+      "target": "song"
+     },
+     {
+      "source": "book",
+      "target": "kite"
+     },
+     {
+      "source": "book",
+      "target": "bike"
+     },
+     {
+      "source": "book",
+      "target": "song"
+     },
+     {
+      "source": "bike",
+      "target": "kite"
+     },
+     {
+      "source": "bike",
+      "target": "book"
+     },
+     {
+      "source": "bike",
+      "target": "song"
+     },
+     {
+      "source": "song",
+      "target": "kite"
+     },
+     {
+      "source": "song",
+      "target": "book"
+     },
+     {
+      "source": "song",
+      "target": "bike"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "objects",
+    "template": "Tom needed a {arg} so he could",
+    "args": {
+     "pencil": " draw",
+     "spoon": " eat",
+     "ball": " play",
+     "bed": " sleep"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "pencil",
+      "answer": " draw",
+      "arg_token": 46118,
+      "answer_token": 4038,
+      "top": " draw",
+      "prob": 0.8754655122756958,
+      "problem": null
+     },
+     {
+      "arg": "spoon",
+      "answer": " eat",
+      "arg_token": 45505,
+      "answer_token": 8180,
+      "top": " eat",
+      "prob": 0.5972488522529602,
+      "problem": null
+     },
+     {
+      "arg": "ball",
+      "answer": " play",
+      "arg_token": 4935,
+      "answer_token": 1486,
+      "top": " play",
+      "prob": 0.9577347636222839,
+      "problem": null
+     },
+     {
+      "arg": "bed",
+      "answer": " sleep",
+      "arg_token": 4845,
+      "answer_token": 6084,
+      "top": " sleep",
+      "prob": 0.7142841815948486,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "pencil",
+     "spoon",
+     "ball",
+     "bed"
+    ],
+    "trials": [
+     {
+      "source": "pencil",
+      "target": "spoon"
+     },
+     {
+      "source": "pencil",
+      "target": "ball"
+     },
+     {
+      "source": "pencil",
+      "target": "bed"
+     },
+     {
+      "source": "spoon",
+      "target": "pencil"
+     },
+     {
+      "source": "spoon",
+      "target": "ball"
+     },
+     {
+      "source": "spoon",
+      "target": "bed"
+     },
+     {
+      "source": "ball",
+      "target": "pencil"
+     },
+     {
+      "source": "ball",
+      "target": "spoon"
+     },
+     {
+      "source": "ball",
+      "target": "bed"
+     },
+     {
+      "source": "bed",
+      "target": "pencil"
+     },
+     {
+      "source": "bed",
+      "target": "spoon"
+     },
+     {
+      "source": "bed",
+      "target": "ball"
+     }
+    ]
+   },
+   {
+    "domain": "stories",
+    "category": "animals",
+    "template": "The {arg} can",
+    "args": {
+     "dog": " run",
+     "bird": " fly",
+     "frog": " jump",
+     "fish": " swim"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "dog",
+      "answer": " run",
+      "arg_token": 5562,
+      "answer_token": 1598,
+      "top": " run",
+      "prob": 0.3924942910671234,
+      "problem": null
+     },
+     {
+      "arg": "bird",
+      "answer": " fly",
+      "arg_token": 11958,
+      "answer_token": 11466,
+      "top": " fly",
+      "prob": 0.35264110565185547,
+      "problem": null
+     },
+     {
+      "arg": "frog",
+      "answer": " jump",
+      "arg_token": 59881,
+      "answer_token": 7784,
+      "top": " jump",
+      "prob": 0.8353011608123779,
+      "problem": null
+     },
+     {
+      "arg": "fish",
+      "answer": " swim",
+      "arg_token": 7640,
+      "answer_token": 16191,
+      "top": " be",
+      "prob": 0.1184219941496849,
+      "problem": "model says ' be'"
+     }
+    ],
+    "kept": [
+     "dog",
+     "bird",
+     "frog"
+    ],
+    "trials": [
+     {
+      "source": "dog",
+      "target": "bird"
+     },
+     {
+      "source": "dog",
+      "target": "frog"
+     },
+     {
+      "source": "bird",
+      "target": "dog"
+     },
+     {
+      "source": "bird",
+      "target": "frog"
+     },
+     {
+      "source": "frog",
+      "target": "dog"
+     },
+     {
+      "source": "frog",
+      "target": "bird"
+     }
+    ]
+   }
+  ]
+ },
+ "python": {
+  "val": [
+   {
+    "domain": "python",
+    "category": "operators",
+    "template": "class Calc:\n    def {arg}(self, a, b):\n        return a",
+    "args": {
+     "add": " +",
+     "sub": " -",
+     "mul": " *",
+     "div": " /"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "add",
+      "answer": " +",
+      "arg_token": 912,
+      "answer_token": 488,
+      "top": " +",
+      "prob": 0.8666536808013916,
+      "problem": null
+     },
+     {
+      "arg": "sub",
+      "answer": " -",
+      "arg_token": 1186,
+      "answer_token": 481,
+      "top": " -",
+      "prob": 0.8022497892379761,
+      "problem": null
+     },
+     {
+      "arg": "mul",
+      "answer": " *",
+      "arg_token": 15602,
+      "answer_token": 353,
+      "top": " *",
+      "prob": 0.7755922079086304,
+      "problem": null
+     },
+     {
+      "arg": "div",
+      "answer": " /",
+      "arg_token": 3429,
+      "answer_token": 608,
+      "top": " /",
+      "prob": 0.749636173248291,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "add",
+     "sub",
+     "mul",
+     "div"
+    ],
+    "trials": [
+     {
+      "source": "add",
+      "target": "sub"
+     },
+     {
+      "source": "add",
+      "target": "mul"
+     },
+     {
+      "source": "add",
+      "target": "div"
+     },
+     {
+      "source": "sub",
+      "target": "add"
+     },
+     {
+      "source": "sub",
+      "target": "mul"
+     },
+     {
+      "source": "sub",
+      "target": "div"
+     },
+     {
+      "source": "mul",
+      "target": "add"
+     },
+     {
+      "source": "mul",
+      "target": "sub"
+     },
+     {
+      "source": "mul",
+      "target": "div"
+     },
+     {
+      "source": "div",
+      "target": "add"
+     },
+     {
+      "source": "div",
+      "target": "sub"
+     },
+     {
+      "source": "div",
+      "target": "mul"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "aliases",
+    "template": "try:\n    import {arg} as",
+    "args": {
+     "numpy": " np",
+     "pandas": " pd",
+     "tensorflow": " tf",
+     "seaborn": " sns"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "numpy",
+      "answer": " np",
+      "arg_token": 8591,
+      "answer_token": 2595,
+      "top": " np",
+      "prob": 0.992946445941925,
+      "problem": null
+     },
+     {
+      "arg": "pandas",
+      "answer": " pd",
+      "arg_token": 18617,
+      "answer_token": 7744,
+      "top": " pd",
+      "prob": 0.9939435124397278,
+      "problem": null
+     },
+     {
+      "arg": "tensorflow",
+      "answer": " tf",
+      "arg_token": 28087,
+      "answer_token": 6409,
+      "top": " tf",
+      "prob": 0.998084306716919,
+      "problem": null
+     },
+     {
+      "arg": "seaborn",
+      "answer": " sns",
+      "arg_token": 94760,
+      "answer_token": 50101,
+      "top": " sns",
+      "prob": 0.9365717172622681,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "numpy",
+     "pandas",
+     "tensorflow",
+     "seaborn"
+    ],
+    "trials": [
+     {
+      "source": "numpy",
+      "target": "pandas"
+     },
+     {
+      "source": "numpy",
+      "target": "tensorflow"
+     },
+     {
+      "source": "numpy",
+      "target": "seaborn"
+     },
+     {
+      "source": "pandas",
+      "target": "numpy"
+     },
+     {
+      "source": "pandas",
+      "target": "tensorflow"
+     },
+     {
+      "source": "pandas",
+      "target": "seaborn"
+     },
+     {
+      "source": "tensorflow",
+      "target": "numpy"
+     },
+     {
+      "source": "tensorflow",
+      "target": "pandas"
+     },
+     {
+      "source": "tensorflow",
+      "target": "seaborn"
+     },
+     {
+      "source": "seaborn",
+      "target": "numpy"
+     },
+     {
+      "source": "seaborn",
+      "target": "pandas"
+     },
+     {
+      "source": "seaborn",
+      "target": "tensorflow"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "types",
+    "template": "x = {arg}()\nprint(type(x))  # <class '",
+    "args": {
+     "list": "list",
+     "dict": "dict",
+     "set": "set",
+     "str": "str"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "list",
+      "answer": "list",
+      "arg_token": 1140,
+      "answer_token": 1607,
+      "top": "list",
+      "prob": 0.9793850183486938,
+      "problem": null
+     },
+     {
+      "arg": "dict",
+      "answer": "dict",
+      "arg_token": 6451,
+      "answer_token": 8477,
+      "top": "dict",
+      "prob": 0.9859160780906677,
+      "problem": null
+     },
+     {
+      "arg": "set",
+      "answer": "set",
+      "arg_token": 738,
+      "answer_token": 746,
+      "top": "set",
+      "prob": 0.9953963160514832,
+      "problem": null
+     },
+     {
+      "arg": "str",
+      "answer": "str",
+      "arg_token": 607,
+      "answer_token": 495,
+      "top": "str",
+      "prob": 0.9743761420249939,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "list",
+     "dict",
+     "set",
+     "str"
+    ],
+    "trials": [
+     {
+      "source": "list",
+      "target": "dict"
+     },
+     {
+      "source": "list",
+      "target": "set"
+     },
+     {
+      "source": "list",
+      "target": "str"
+     },
+     {
+      "source": "dict",
+      "target": "list"
+     },
+     {
+      "source": "dict",
+      "target": "set"
+     },
+     {
+      "source": "dict",
+      "target": "str"
+     },
+     {
+      "source": "set",
+      "target": "list"
+     },
+     {
+      "source": "set",
+      "target": "dict"
+     },
+     {
+      "source": "set",
+      "target": "str"
+     },
+     {
+      "source": "str",
+      "target": "list"
+     },
+     {
+      "source": "str",
+      "target": "dict"
+     },
+     {
+      "source": "str",
+      "target": "set"
+     }
+    ]
+   }
+  ],
+  "test": [
+   {
+    "domain": "python",
+    "category": "operators",
+    "template": "def {arg}(x, y):\n    return x",
+    "args": {
+     "add": " +",
+     "sub": " -",
+     "mul": " *",
+     "div": " /"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "add",
+      "answer": " +",
+      "arg_token": 912,
+      "answer_token": 488,
+      "top": " +",
+      "prob": 0.8938412666320801,
+      "problem": null
+     },
+     {
+      "arg": "sub",
+      "answer": " -",
+      "arg_token": 1186,
+      "answer_token": 481,
+      "top": " -",
+      "prob": 0.7917190790176392,
+      "problem": null
+     },
+     {
+      "arg": "mul",
+      "answer": " *",
+      "arg_token": 15602,
+      "answer_token": 353,
+      "top": " *",
+      "prob": 0.8215672969818115,
+      "problem": null
+     },
+     {
+      "arg": "div",
+      "answer": " /",
+      "arg_token": 3429,
+      "answer_token": 608,
+      "top": " /",
+      "prob": 0.5774676203727722,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "add",
+     "sub",
+     "mul",
+     "div"
+    ],
+    "trials": [
+     {
+      "source": "add",
+      "target": "sub"
+     },
+     {
+      "source": "add",
+      "target": "mul"
+     },
+     {
+      "source": "add",
+      "target": "div"
+     },
+     {
+      "source": "sub",
+      "target": "add"
+     },
+     {
+      "source": "sub",
+      "target": "mul"
+     },
+     {
+      "source": "sub",
+      "target": "div"
+     },
+     {
+      "source": "mul",
+      "target": "add"
+     },
+     {
+      "source": "mul",
+      "target": "sub"
+     },
+     {
+      "source": "mul",
+      "target": "div"
+     },
+     {
+      "source": "div",
+      "target": "add"
+     },
+     {
+      "source": "div",
+      "target": "sub"
+     },
+     {
+      "source": "div",
+      "target": "mul"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "aliases",
+    "template": "import {arg} as",
+    "args": {
+     "numpy": " np",
+     "pandas": " pd",
+     "tensorflow": " tf",
+     "scipy": " sp",
+     "seaborn": " sns"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "numpy",
+      "answer": " np",
+      "arg_token": 8591,
+      "answer_token": 2595,
+      "top": " np",
+      "prob": 0.9967033267021179,
+      "problem": null
+     },
+     {
+      "arg": "pandas",
+      "answer": " pd",
+      "arg_token": 18617,
+      "answer_token": 7744,
+      "top": " pd",
+      "prob": 0.9958662986755371,
+      "problem": null
+     },
+     {
+      "arg": "tensorflow",
+      "answer": " tf",
+      "arg_token": 28087,
+      "answer_token": 6409,
+      "top": " tf",
+      "prob": 0.9988504648208618,
+      "problem": null
+     },
+     {
+      "arg": "scipy",
+      "answer": " sp",
+      "arg_token": 28090,
+      "answer_token": 978,
+      "top": " sp",
+      "prob": 0.8679678440093994,
+      "problem": null
+     },
+     {
+      "arg": "seaborn",
+      "answer": " sns",
+      "arg_token": 94760,
+      "answer_token": 50101,
+      "top": " sns",
+      "prob": 0.9593945145606995,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "numpy",
+     "pandas",
+     "tensorflow",
+     "scipy"
+    ],
+    "trials": [
+     {
+      "source": "numpy",
+      "target": "pandas"
+     },
+     {
+      "source": "numpy",
+      "target": "tensorflow"
+     },
+     {
+      "source": "numpy",
+      "target": "scipy"
+     },
+     {
+      "source": "pandas",
+      "target": "numpy"
+     },
+     {
+      "source": "pandas",
+      "target": "tensorflow"
+     },
+     {
+      "source": "pandas",
+      "target": "scipy"
+     },
+     {
+      "source": "tensorflow",
+      "target": "numpy"
+     },
+     {
+      "source": "tensorflow",
+      "target": "pandas"
+     },
+     {
+      "source": "tensorflow",
+      "target": "scipy"
+     },
+     {
+      "source": "scipy",
+      "target": "numpy"
+     },
+     {
+      "source": "scipy",
+      "target": "pandas"
+     },
+     {
+      "source": "scipy",
+      "target": "tensorflow"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "aliases",
+    "template": "# {arg} is usually imported as",
+    "args": {
+     "numpy": " np",
+     "pandas": " pd",
+     "tensorflow": " tf",
+     "seaborn": " sns"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "numpy",
+      "answer": " np",
+      "arg_token": 8591,
+      "answer_token": 2595,
+      "top": " np",
+      "prob": 0.5014698505401611,
+      "problem": null
+     },
+     {
+      "arg": "pandas",
+      "answer": " pd",
+      "arg_token": 18617,
+      "answer_token": 7744,
+      "top": " pd",
+      "prob": 0.6878947615623474,
+      "problem": null
+     },
+     {
+      "arg": "tensorflow",
+      "answer": " tf",
+      "arg_token": 28087,
+      "answer_token": 6409,
+      "top": " tf",
+      "prob": 0.17905928194522858,
+      "problem": null
+     },
+     {
+      "arg": "seaborn",
+      "answer": " sns",
+      "arg_token": 94760,
+      "answer_token": 50101,
+      "top": " sns",
+      "prob": 0.16162139177322388,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "numpy",
+     "pandas",
+     "tensorflow",
+     "seaborn"
+    ],
+    "trials": [
+     {
+      "source": "numpy",
+      "target": "pandas"
+     },
+     {
+      "source": "numpy",
+      "target": "tensorflow"
+     },
+     {
+      "source": "numpy",
+      "target": "seaborn"
+     },
+     {
+      "source": "pandas",
+      "target": "numpy"
+     },
+     {
+      "source": "pandas",
+      "target": "tensorflow"
+     },
+     {
+      "source": "pandas",
+      "target": "seaborn"
+     },
+     {
+      "source": "tensorflow",
+      "target": "numpy"
+     },
+     {
+      "source": "tensorflow",
+      "target": "pandas"
+     },
+     {
+      "source": "tensorflow",
+      "target": "seaborn"
+     },
+     {
+      "source": "seaborn",
+      "target": "numpy"
+     },
+     {
+      "source": "seaborn",
+      "target": "pandas"
+     },
+     {
+      "source": "seaborn",
+      "target": "tensorflow"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "operators",
+    "template": "{arg} = lambda a, b: a",
+    "args": {
+     "add": " +",
+     "mul": " *",
+     "div": " /",
+     "sub": " -"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "add",
+      "answer": " +",
+      "arg_token": 718,
+      "answer_token": 488,
+      "top": " +",
+      "prob": 0.8197320103645325,
+      "problem": null
+     },
+     {
+      "arg": "mul",
+      "answer": " *",
+      "arg_token": 24160,
+      "answer_token": 353,
+      "top": " *",
+      "prob": 0.37136977910995483,
+      "problem": null
+     },
+     {
+      "arg": "div",
+      "answer": " /",
+      "arg_token": 611,
+      "answer_token": 608,
+      "top": " /",
+      "prob": 0.24464799463748932,
+      "problem": null
+     },
+     {
+      "arg": "sub",
+      "answer": " -",
+      "arg_token": 1966,
+      "answer_token": 481,
+      "top": " +",
+      "prob": 0.14997589588165283,
+      "problem": "model says ' +'"
+     }
+    ],
+    "kept": [
+     "add",
+     "mul",
+     "div"
+    ],
+    "trials": [
+     {
+      "source": "add",
+      "target": "mul"
+     },
+     {
+      "source": "add",
+      "target": "div"
+     },
+     {
+      "source": "mul",
+      "target": "add"
+     },
+     {
+      "source": "mul",
+      "target": "div"
+     },
+     {
+      "source": "div",
+      "target": "add"
+     },
+     {
+      "source": "div",
+      "target": "mul"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "modules",
+    "template": "import os\nfrom {arg} import",
+    "args": {
+     "math": " sqrt",
+     "json": " loads",
+     "time": " sleep",
+     "random": " randint",
+     "functools": " reduce"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "math",
+      "answer": " sqrt",
+      "arg_token": 6888,
+      "answer_token": 17946,
+      "top": " sqrt",
+      "prob": 0.21769380569458008,
+      "problem": null
+     },
+     {
+      "arg": "json",
+      "answer": " loads",
+      "arg_token": 2951,
+      "answer_token": 20907,
+      "top": " loads",
+      "prob": 0.3268994688987732,
+      "problem": null
+     },
+     {
+      "arg": "time",
+      "answer": " sleep",
+      "arg_token": 882,
+      "answer_token": 6084,
+      "top": " sleep",
+      "prob": 0.749579668045044,
+      "problem": null
+     },
+     {
+      "arg": "random",
+      "answer": " randint",
+      "arg_token": 4194,
+      "answer_token": 53182,
+      "top": " randint",
+      "prob": 0.4528055191040039,
+      "problem": null
+     },
+     {
+      "arg": "functools",
+      "answer": " reduce",
+      "arg_token": 56466,
+      "answer_token": 7949,
+      "top": " partial",
+      "prob": 0.19701945781707764,
+      "problem": "model says ' partial'"
+     }
+    ],
+    "kept": [
+     "math",
+     "json",
+     "time",
+     "random"
+    ],
+    "trials": [
+     {
+      "source": "math",
+      "target": "json"
+     },
+     {
+      "source": "math",
+      "target": "time"
+     },
+     {
+      "source": "math",
+      "target": "random"
+     },
+     {
+      "source": "json",
+      "target": "math"
+     },
+     {
+      "source": "json",
+      "target": "time"
+     },
+     {
+      "source": "json",
+      "target": "random"
+     },
+     {
+      "source": "time",
+      "target": "math"
+     },
+     {
+      "source": "time",
+      "target": "json"
+     },
+     {
+      "source": "time",
+      "target": "random"
+     },
+     {
+      "source": "random",
+      "target": "math"
+     },
+     {
+      "source": "random",
+      "target": "json"
+     },
+     {
+      "source": "random",
+      "target": "time"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "aliases",
+    "template": "import os\nimport {arg} as",
+    "args": {
+     "numpy": " np",
+     "pandas": " pd",
+     "tensorflow": " tf",
+     "scipy": " sp"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "numpy",
+      "answer": " np",
+      "arg_token": 8591,
+      "answer_token": 2595,
+      "top": " np",
+      "prob": 0.9983738660812378,
+      "problem": null
+     },
+     {
+      "arg": "pandas",
+      "answer": " pd",
+      "arg_token": 18617,
+      "answer_token": 7744,
+      "top": " pd",
+      "prob": 0.9983263611793518,
+      "problem": null
+     },
+     {
+      "arg": "tensorflow",
+      "answer": " tf",
+      "arg_token": 28087,
+      "answer_token": 6409,
+      "top": " tf",
+      "prob": 0.9989979863166809,
+      "problem": null
+     },
+     {
+      "arg": "scipy",
+      "answer": " sp",
+      "arg_token": 28090,
+      "answer_token": 978,
+      "top": " sp",
+      "prob": 0.8636133670806885,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "numpy",
+     "pandas",
+     "tensorflow",
+     "scipy"
+    ],
+    "trials": [
+     {
+      "source": "numpy",
+      "target": "pandas"
+     },
+     {
+      "source": "numpy",
+      "target": "tensorflow"
+     },
+     {
+      "source": "numpy",
+      "target": "scipy"
+     },
+     {
+      "source": "pandas",
+      "target": "numpy"
+     },
+     {
+      "source": "pandas",
+      "target": "tensorflow"
+     },
+     {
+      "source": "pandas",
+      "target": "scipy"
+     },
+     {
+      "source": "tensorflow",
+      "target": "numpy"
+     },
+     {
+      "source": "tensorflow",
+      "target": "pandas"
+     },
+     {
+      "source": "tensorflow",
+      "target": "scipy"
+     },
+     {
+      "source": "scipy",
+      "target": "numpy"
+     },
+     {
+      "source": "scipy",
+      "target": "pandas"
+     },
+     {
+      "source": "scipy",
+      "target": "tensorflow"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "types",
+    "template": "value = {arg}()\nprint(type(value))  # <class '",
+    "args": {
+     "list": "list",
+     "dict": "dict",
+     "set": "set",
+     "str": "str"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "list",
+      "answer": "list",
+      "arg_token": 1140,
+      "answer_token": 1607,
+      "top": "list",
+      "prob": 0.973942756652832,
+      "problem": null
+     },
+     {
+      "arg": "dict",
+      "answer": "dict",
+      "arg_token": 6451,
+      "answer_token": 8477,
+      "top": "dict",
+      "prob": 0.9840519428253174,
+      "problem": null
+     },
+     {
+      "arg": "set",
+      "answer": "set",
+      "arg_token": 738,
+      "answer_token": 746,
+      "top": "set",
+      "prob": 0.992724597454071,
+      "problem": null
+     },
+     {
+      "arg": "str",
+      "answer": "str",
+      "arg_token": 607,
+      "answer_token": 495,
+      "top": "str",
+      "prob": 0.9730163812637329,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "list",
+     "dict",
+     "set",
+     "str"
+    ],
+    "trials": [
+     {
+      "source": "list",
+      "target": "dict"
+     },
+     {
+      "source": "list",
+      "target": "set"
+     },
+     {
+      "source": "list",
+      "target": "str"
+     },
+     {
+      "source": "dict",
+      "target": "list"
+     },
+     {
+      "source": "dict",
+      "target": "set"
+     },
+     {
+      "source": "dict",
+      "target": "str"
+     },
+     {
+      "source": "set",
+      "target": "list"
+     },
+     {
+      "source": "set",
+      "target": "dict"
+     },
+     {
+      "source": "set",
+      "target": "str"
+     },
+     {
+      "source": "str",
+      "target": "list"
+     },
+     {
+      "source": "str",
+      "target": "dict"
+     },
+     {
+      "source": "str",
+      "target": "set"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "modules",
+    "template": "from {arg} import",
+    "args": {
+     "math": " sqrt",
+     "json": " loads",
+     "time": " sleep",
+     "random": " randint",
+     "functools": " reduce",
+     "sys": " argv"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "math",
+      "answer": " sqrt",
+      "arg_token": 6888,
+      "answer_token": 17946,
+      "top": " sqrt",
+      "prob": 0.27837201952934265,
+      "problem": null
+     },
+     {
+      "arg": "json",
+      "answer": " loads",
+      "arg_token": 2951,
+      "answer_token": 20907,
+      "top": " loads",
+      "prob": 0.3982164263725281,
+      "problem": null
+     },
+     {
+      "arg": "time",
+      "answer": " sleep",
+      "arg_token": 882,
+      "answer_token": 6084,
+      "top": " sleep",
+      "prob": 0.6932994723320007,
+      "problem": null
+     },
+     {
+      "arg": "random",
+      "answer": " randint",
+      "arg_token": 4194,
+      "answer_token": 53182,
+      "top": " randint",
+      "prob": 0.5846124887466431,
+      "problem": null
+     },
+     {
+      "arg": "functools",
+      "answer": " reduce",
+      "arg_token": 56466,
+      "answer_token": 7949,
+      "top": " reduce",
+      "prob": 0.5233299732208252,
+      "problem": null
+     },
+     {
+      "arg": "sys",
+      "answer": " argv",
+      "arg_token": 5708,
+      "answer_token": 10213,
+      "top": " argv",
+      "prob": 0.43574804067611694,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "math",
+     "json",
+     "time",
+     "random"
+    ],
+    "trials": [
+     {
+      "source": "math",
+      "target": "json"
+     },
+     {
+      "source": "math",
+      "target": "time"
+     },
+     {
+      "source": "math",
+      "target": "random"
+     },
+     {
+      "source": "json",
+      "target": "math"
+     },
+     {
+      "source": "json",
+      "target": "time"
+     },
+     {
+      "source": "json",
+      "target": "random"
+     },
+     {
+      "source": "time",
+      "target": "math"
+     },
+     {
+      "source": "time",
+      "target": "json"
+     },
+     {
+      "source": "time",
+      "target": "random"
+     },
+     {
+      "source": "random",
+      "target": "math"
+     },
+     {
+      "source": "random",
+      "target": "json"
+     },
+     {
+      "source": "random",
+      "target": "time"
+     }
+    ]
+   },
+   {
+    "domain": "python",
+    "category": "operators",
+    "template": "def {arg}(a, b):\n    return a",
+    "args": {
+     "add": " +",
+     "sub": " -",
+     "mul": " *",
+     "div": " /"
+    },
+    "source": "agent",
+    "results": [
+     {
+      "arg": "add",
+      "answer": " +",
+      "arg_token": 912,
+      "answer_token": 488,
+      "top": " +",
+      "prob": 0.8470008969306946,
+      "problem": null
+     },
+     {
+      "arg": "sub",
+      "answer": " -",
+      "arg_token": 1186,
+      "answer_token": 481,
+      "top": " -",
+      "prob": 0.737533688545227,
+      "problem": null
+     },
+     {
+      "arg": "mul",
+      "answer": " *",
+      "arg_token": 15602,
+      "answer_token": 353,
+      "top": " *",
+      "prob": 0.8049923777580261,
+      "problem": null
+     },
+     {
+      "arg": "div",
+      "answer": " /",
+      "arg_token": 3429,
+      "answer_token": 608,
+      "top": " /",
+      "prob": 0.6233459115028381,
+      "problem": null
+     }
+    ],
+    "kept": [
+     "add",
+     "sub",
+     "mul",
+     "div"
+    ],
+    "trials": [
+     {
+      "source": "add",
+      "target": "sub"
+     },
+     {
+      "source": "add",
+      "target": "mul"
+     },
+     {
+      "source": "add",
+      "target": "div"
+     },
+     {
+      "source": "sub",
+      "target": "add"
+     },
+     {
+      "source": "sub",
+      "target": "mul"
+     },
+     {
+      "source": "sub",
+      "target": "div"
+     },
+     {
+      "source": "mul",
+      "target": "add"
+     },
+     {
+      "source": "mul",
+      "target": "sub"
+     },
+     {
+      "source": "mul",
+      "target": "div"
+     },
+     {
+      "source": "div",
+      "target": "add"
+     },
+     {
+      "source": "div",
+      "target": "sub"
+     },
+     {
+      "source": "div",
+      "target": "mul"
+     }
+    ]
+   }
+  ]
+ }
+}
