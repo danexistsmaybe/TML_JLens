@@ -15,3 +15,4 @@ analysis/out/
 # Experiment outputs: per-item scores are regenerable; tables, summaries and figures are tracked.
 results/raw/
 logs/
+results/dry_run/
