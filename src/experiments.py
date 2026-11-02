@@ -446,7 +446,8 @@ def main():
     parser.add_argument("--split", choices=["val", "test"], default="val")
     parser.add_argument("--force", action="store_true", help="overwrite existing results")
     args = parser.parse_args()
-    model, tok = load_model()
+    # Choosing settings uses cached features and Jacobians, so it needs no model or GPU.
+    model, tok = (None, None) if args.command == "select" else load_model()
     if args.command == "features":
         for domain in DOMAINS:
             features_of(model, domain, BAND)
