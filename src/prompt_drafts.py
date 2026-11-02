@@ -88,7 +88,7 @@ PASS_AT_K += [_p("wiki", "multihop", "hard", p, i, a) for p, i, a in [
 ]]
 
 # ---------------------------------------------------------------------------------------
-# Pass@k: stories (association). A short passage implies a concept; read at the final period.
+# Pass@k: stories (association). A short passage implies a concept; see the read position note below.
 # ---------------------------------------------------------------------------------------
 PASS_AT_K += [
     _p("stories", "association", "medium", "Tom put on his warm coat and walked out to the barn. He checked the hay, and the cows were eating, and the hens were sleeping. Then he sat on a log and watched the green rows of corn grow under the sun.", "farm", source="subagent"),
@@ -162,13 +162,27 @@ PASS_AT_K += [_p("stories", "association", d, p, i) for d, p, i in [
     ("medium", "Everyone wore their best clothes. The bride smiled, the man in the suit gave her a ring, and they cut a tall white cake.", "wedding"),
 ]]
 
-# The paper reads association prompts at the closing period. On this small model the readout
-# there is sentence starters and formatting, so every lens fails (smoke test, validation
-# prompts). Reading at a following " The" works: the model is about to name something in the
-# scene. This departs from the paper, and makes the intermediate closer to a next-token guess.
+# Read position (decided 2026-11-02, on validation prompts). The paper reads association prompts
+# at the closing period, but on this small model the readout there is sentence starters and
+# formatting. So we append one token, chosen by asking: would this ending ask the model to NAME
+# the target? We want targets that differ from what is obviously being prompted for.
+#   * The story describes a thing, and " The" would ask the model to name it (the small animal
+#     that says meow, then " The"). These end in a pronoun, so a verb comes next and the target
+#     can't simply be the next word.
+#   * The target is a setting, event or abstract concept. After " The", the obvious next word is
+#     something in the scene (a wedding story gives "bride"), so the target is still latent.
+#     These keep " The", even where the target also ranks high as a next token. That is a
+#     judgment about each prompt, not a rank cutoff.
+_NAMED_BY_DESCRIPTION = {
+    "dog": " It", "cat": " It", "dragon": " It", "spider": " It", "elephant": " It", "rabbit": " It", "kite": " It",
+    "carousel": " It", "rainbow": " It", "bike": " She", "princess": " She", "queen": " She", "doctor": " She",
+    "dentist": " She", "cake": " She", "Santa": " He", "tree": " He", "rain": " He", "story": " He",
+    "lighthouse": " He", "sea": " He", "bus": " They", "pirate": " They", "fire": " They", "snow": " They",
+    "movie": " They", "fireworks": " They",
+}
 for _item in PASS_AT_K:
     if _item["domain"] == "stories":
-        _item["prompt"] += " The"
+        _item["prompt"] += _NAMED_BY_DESCRIPTION.get(_item["intermediate"], " The")
 
 # ---------------------------------------------------------------------------------------
 # Pass@k: python. Two kinds: evaluating an expression, and code that implies a concept.
@@ -263,12 +277,18 @@ PASS_AT_K += [_p("python", "implied", d, p, i) for d, p, i in [
     ("hard", 'print("bad value")\nsys.exit(1)\n', "error"),
 ]]
 
-# As with stories, "implied" python prompts are read where the model is about to name
-# something: a following "def", after a blank line. Also a departure from the paper's read
-# positions, chosen on a smoke test of the first 14 drafts.
-for _item in PASS_AT_K:
-    if _item["type"] == "implied":
-        _item["prompt"] += "\ndef"
+# "Implied" python prompts are read at the end of the code, with nothing appended. An earlier
+# draft appended "def", but that asks for a function name, which is exactly what most targets
+# are. Reading at the end of the code matched next-token guesses on none of the validation
+# prompts, and separated the J-lens from the logit lens more clearly (2026-11-02).
+
+# Words pinned to validation, so that prompts already scored with a lens stay out of test when
+# drafts change. Everything else that passes the checks is eligible for test.
+VAL_WORDS = {
+    'wiki': ['America', 'India', 'Italy', 'Korea', 'Moscow', 'Netherlands'],
+    'stories': ['birthday', 'bus', 'camping', 'gift', 'lie', 'queen', 'rain', 'soccer', 'surprise', 'wedding'],
+    'python': ['8', 'area', 'database', 'graph', 'leap', 'parallel', 'prime', 'regex'],
+}
 
 # ---------------------------------------------------------------------------------------
 # Swap templates. Arguments are listed in order of preference; the first 4 that pass are used.

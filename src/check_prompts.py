@@ -7,7 +7,7 @@ Output: data/prompts/pass_at_k.json, data/prompts/swap.json, data/prompts/REVIEW
 
 No lens is used here, so nothing in this file can favor one lens over another.
 
-Pass@k prompts are kept if:
+Read-position choices, made per prompt, are explained in prompt_drafts.py. Pass@k prompts are kept if:
   * the intermediate is one token (with or without a leading space);
   * it isn't in the prompt and isn't the model's top next token;
   * where a prompt has a final answer, the answer's first token is in the model's top 3.
@@ -163,17 +163,17 @@ def check_pass_item(model, tok, draft: dict) -> dict:
     return item
 
 
-def split_pass(items: list[dict]) -> dict[str, list[dict]]:
-    """Split one domain by intermediate word, then cap test, keeping a spread of difficulty."""
+def split_pass(items: list[dict], domain: str) -> dict[str, list[dict]]:
+    """Split one domain by intermediate word, then cap test, keeping a spread of difficulty.
+
+    Validation words are pinned in prompt_drafts.VAL_WORDS, so editing drafts can't move a
+    prompt that has already been scored with a lens into test.
+    """
     rng = random.Random(SEED)
-    groups = defaultdict(list)
-    for item in items:
-        groups[word_key(item["intermediate"])].append(item)
-    keys = sorted(groups)
-    rng.shuffle(keys)
-    val, test = [], []
-    for key in keys:
-        (val if len(val) < N_PASS["val"] else test).extend(groups[key])
+    pinned = {word_key(w) for w in prompt_drafts.VAL_WORDS[domain]}
+    val = [i for i in items if word_key(i["intermediate"]) in pinned]
+    test = [i for i in items if word_key(i["intermediate"]) not in pinned]
+    rng.shuffle(test)
     by_difficulty = defaultdict(list)
     for item in test:
         by_difficulty[item["difficulty"]].append(item)
@@ -256,12 +256,13 @@ def write_review(checked, pass_sets, swap_checked, swap_sets):
              "",
              "## What to check", "",
              "These sets are unreviewed drafts, and experiments may run on them. Edits are cheap to rerun.", "",
-             "1. **Read positions depart from the paper.** Stories prompts end in ` The`, and implied-concept python prompts end in `def`, because this model's readout at a final period or newline is mostly formatting. This pulls the intermediates closer to next-token guesses.",
-             "2. **Lens exposure.** Those two formats were chosen by scoring small lenses on 8 stories drafts and the first 14 implied-concept python drafts, and some of those are now in test. No lens has otherwise seen test prompts.",
+             "1. **Stories read positions depart from the paper.** The paper reads at the closing period; this model's readout there is mostly sentence starters and formatting. So each story gets one added token. If the story describes a thing that ` The` would ask the model to name (the animal that says meow), it ends in a pronoun, so the target isn't the obvious next word. If the target is a setting, event or abstract concept, it keeps ` The`, because the obvious next word is something else in the scene. This was a judgment per prompt, not a rank cutoff. Please check the choices (`_NAMED_BY_DESCRIPTION` in `src/prompt_drafts.py`).",
+             "2. **Lens exposure.** The read formats were chosen on validation prompts, except that the first ` The` and `def` formats were found by scoring small lenses on 8 stories drafts and 14 python drafts, some of them now in test. Those scores chose a format for all prompts, not individual prompts, and the `def` format was later dropped. No lens has otherwise seen test prompts.",
              "3. **Competence rule.** A final answer counts as right if its first token is in the model's top 3. Top-1 would drop many more wiki prompts.",
              "4. **Swap vectors are scaled to unit length.** The paper doesn't say whether it normalizes.",
              "5. **Templates split, entities shared.** Validation and test swap templates are different, but can share arguments such as France.",
-             "6. **Difficulty labels and control tokens** are the agent's and an automatic pick. Controls may need a look for accidental relatedness.", "",
+             "6. **Difficulty labels and control tokens** are the agent's and an automatic pick. Controls may need a look for accidental relatedness.",
+             "7. **Next-token overlap remains by design.** Wiki targets are bridges, different from the asked-for answer, even when they rank high as next tokens. Python `evaluate` targets are intermediate values, different from the final answer, but their digit controls are equally plausible, so pass@10 saturates there; pass@1 is the useful number.", "",
              "## Summary", "",
              "| Domain | Pass@k drafted | Passed checks | Validation | Test | Swap templates drafted | Validation | Test | Test trials |",
              "|---|---|---|---|---|---|---|---|---|"]
@@ -308,7 +309,7 @@ def main():
     pass_sets = {}
     for domain in DOMAINS:
         kept = [i for i in checked if i["domain"] == domain and not i["problems"]]
-        pass_sets[domain] = split_pass(kept)
+        pass_sets[domain] = split_pass(kept, domain)
         chosen = pass_sets[domain]["val"] + pass_sets[domain]["test"]
         if chosen:
             choose_controls(tok, chosen, frequency)

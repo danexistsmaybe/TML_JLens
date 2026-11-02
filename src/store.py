@@ -50,7 +50,10 @@ class JacobianStore:
             fresh = window_jacobians(self.model, window.ids_tensor(device), missing,
                                      rows_per_pass=self.rows_per_pass)
             stored.update({l: J.half() for l, J in fresh.items()})
-            torch.save(stored, path)
+            # Write then rename, so a stopped run can't leave a half-written file in the cache.
+            partial = path.with_name(f"{path.name}.{os.getpid()}.partial")
+            torch.save(stored, partial)
+            partial.replace(path)
         return {l: stored[l] for l in layers}
 
     def iterate(self, windows: list[Window], layers):
