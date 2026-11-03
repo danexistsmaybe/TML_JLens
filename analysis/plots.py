@@ -211,7 +211,7 @@ def main():
     if table3:
         metrics3 = [m for m in METRICS if m[0] != "overlap"]
         lens_figure([(table3, d) for d in ("wiki", "stories", "python")], ROWS_3, metrics3, FIGURES / "exp3_lenses.png",
-                    "Experiment 3: within a domain (test, 95% intervals)")
+                    "Experiment 3: within a domain. Selecting by similarity doesn't beat random windows (test, 95% intervals)")
 
 
 if __name__ == "__main__":
